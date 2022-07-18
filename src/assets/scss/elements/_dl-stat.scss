@@ -1,0 +1,39 @@
+.dl-stat{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    text-transform: lowercase;
+    position: relative;
+
+    &--online{
+        width: 139px;
+        padding: 0 34px;
+    }
+
+    &__icon{
+        position: absolute;
+        left: -6px;
+    }
+    &__content{
+        position: relative;
+
+    }
+    &__count{
+        color: $orange; 
+        padding-left: 21px;
+        font-size: 21px;
+        line-height: 22px;
+    }
+    &__name{
+        color: $white;
+        line-height: 11px;
+        font-size: 17px;
+    }
+
+}
