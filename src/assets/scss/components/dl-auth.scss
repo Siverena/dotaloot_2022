@@ -1,0 +1,127 @@
+.dl-auth {
+    margin: 0 10px;
+}
+.dl-auth-before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 11px;
+    background: $grey;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 9px 16px 9px 9px;
+
+    color: $light-gray;
+    &__key {
+        width: 47.34px;
+        height: 39.98px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 5px;
+    }
+    &__button{
+        border-radius: 14px;
+        width: 41px;
+        height: 41px;
+        display: flex;
+        align-items: center;
+
+        justify-content: center;
+        &--vk{
+            background-color: #3BBAEE;
+            margin-right: 4px;
+
+        }
+        &--steam{
+            background-color: #49B32C;
+        }
+
+    }
+
+}
+.dl-auth-after{
+    display: flex;
+    align-items: center;
+
+    &__pay{
+        background: #49B32C;
+        border-radius: 5px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 12px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding: 7px 13px;
+        display: flex;
+        img{
+            margin-left: 4px;
+            display: block;
+            width: 17px;
+            height: 17px;
+        }
+    }
+    &__currencies{
+
+        padding: 0 5px;
+    }
+    &__currency{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 12px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        position: relative;
+        padding: 0 0 0 38px;
+        &--rub{
+            color: #94F378;
+
+            &::before{
+                content: '';
+                background-image: url(../assets/img/dl-auth/rub.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 47px;
+                height: 55px;
+                position: absolute;
+                left: 0;
+            }
+        }
+        &--mana{
+            color: #3BC1EE;;
+            &::before{
+                content: '';
+                background-image: url(../assets/img/dl-auth/mana.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 47px;
+                height: 55px;
+                position: absolute;
+                left: 0;
+            }
+        }
+    }
+    &__ava{
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

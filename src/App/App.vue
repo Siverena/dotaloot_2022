@@ -1,6 +1,10 @@
 <template>
   <DlHeader></DlHeader>
-  <router-view />
+  <main>
+    <router-view />
+  </main>
+
+  <DlFooter></DlFooter>
 </template>
 <script src="./app.js"></script>
 

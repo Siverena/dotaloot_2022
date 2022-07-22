@@ -38,6 +38,8 @@
       </svg>
     </DlStat>
     <DlNav />
+    <DlSocials />
+    <DlAuth />
   </div>
 </template>
 <script src="./dl-header.js"></script>
