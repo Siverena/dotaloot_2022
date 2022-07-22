@@ -7,7 +7,6 @@
       <span class="dl-stat__count">
         {{ count }}
       </span>
-
       <div class="dl-stat__name">{{ nameStat }}</div>
     </div>
   </div>

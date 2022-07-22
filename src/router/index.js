@@ -1,7 +1,10 @@
+import PersonalPage from '@/pages/PersonalPage/PersonalPage.vue';
 import { createRouter, createWebHistory } from 'vue-router';
-// import HomeView from '../pages/HomeView.vue';
-import MainPage from '../pages/MainPage/MainPage.vue';
-import CasesPage from '@/pages/CasesPage/CasesPage.vue';
+import AgreementPage from '../pages/AgreementPage/AgreementPage.vue';
+import CasesPage from '../pages/CasesPage/CasesPage.vue';
+import ContactsPage from '../pages/ContactsPage/ContactsPage.vue';
+import PromotionPage from '../pages/PromotionPage/PromotionPage.vue';
+import PartnerPage from '../pages/PartnerPage/PartnerPage.vue';
 
 const routes = [
   {
@@ -10,18 +13,29 @@ const routes = [
     component: CasesPage,
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ '@/pages/AboutView.vue'),
+    path: '/agreement',
+    name: 'agreement',
+    component: AgreementPage,
   },
   {
-    path: '/main',
-    name: 'main',
-    component: MainPage,
+    path: '/contacts',
+    name: 'contacts',
+    component: ContactsPage,
+  },
+  {
+    path: '/promoution',
+    name: 'promoution',
+    component: PromotionPage,
+  },
+  {
+    path: '/personal',
+    name: 'personal',
+    component: PersonalPage,
+  },
+  {
+    path: '/partner',
+    name: 'partner',
+    component: PartnerPage,
   },
 ];
 

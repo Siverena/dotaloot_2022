@@ -10,14 +10,26 @@
 /* COMPONENTS */
 @import './components/dl-header.scss';
 @import './components/dl-nav.scss';
+@import './components/dl-raffles.scss';
+@import './components/dl-cases.scss';
+@import './components/dl-bunner-free-item.scss';
+@import './components/dl-events.scss';
+@import './components/dl-trust.scss';
+@import './components/dl-agree.scss';
+@import './components/dl-beneficiary.scss';
+@import './components/dl-footer.scss';
+@import './components/dl-combinations.scss';
+@import './components/dl-quests.scss';
+@import './components/dl-socials.scss';
+@import './components/dl-auth.scss';
+@import './components/dl-personal-info.scss';
 @import './components/dl-slider.scss';
-
 /**********
 /* ELEMENTS */
 @import './elements/_dl-logo.scss';
 @import './elements/_dl-stat.scss';
 @import './elements/_dl-button.scss';
-
+@import './elements/_dl-section-header.scss';
 /**********
 /* FONTS */
 @import './fonts.scss';
