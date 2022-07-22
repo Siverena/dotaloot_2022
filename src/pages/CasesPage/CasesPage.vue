@@ -1,4 +1,5 @@
 <template>
+  <DlSlider />
   <div class="container">
     <DlRaffles />
     <DlCases>Актуальные кейсы</DlCases>

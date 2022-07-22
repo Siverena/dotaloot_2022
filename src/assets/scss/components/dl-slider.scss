@@ -1,0 +1,114 @@
+.dl-slider {
+  list-style: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  height: 607px;
+}
+.dl-slide {
+  width: 100%;
+  &--get-gift {
+    text-transform: uppercase;
+    padding: 127px 474px 170px 887px;
+    background-image: url('@/assets/img/dl-slider/dl-slider1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    .dl-slide__head {
+      color: $white;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 900;
+      font-size: 86px;
+      line-height: 83.2%;
+      text-align: center;
+      & span {
+        font-size: 73px;
+      }
+    }
+    .dl-slide__descr {
+      font-style: italic;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 97.2%;
+      color: $orange;
+      margin: 42px 0 24px;
+    }
+  }
+}
+.agile {
+  &__nav-button {
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transition-duration: 0.3s;
+    width: 80px;
+    background: transparent no-repeat center;
+    background-size: 30px;
+    font-size: 0;
+    opacity: 0;
+    &:hover {
+      opacity: 0.5;
+    }
+    &--prev {
+      left: 0;
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    }
+    &--next {
+      right: 0;
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    }
+  }
+  &__dots {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    background: transparent no-repeat center;
+    position: absolute;
+    bottom: 26px;
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      position: absolute;
+      background-image: linear-gradient(
+        to right,
+        transparent,
+        $orange,
+        transparent
+      );
+      height: 2px;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+    }
+  }
+  &__dot {
+    margin: 0 4px;
+    & button {
+      color: white;
+      display: block;
+      width: 8px;
+      height: 7px;
+      padding: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      border: none;
+    }
+    &--current button,
+    &:hover button {
+      background-color: $orange;
+    }
+  }
+}
+
+@media (max-width: 834px) {
+  .dl-slide {
+    padding: 100px 465px 170px 883px;
+  }
+}
+@media (max-width: 390px) {
+}

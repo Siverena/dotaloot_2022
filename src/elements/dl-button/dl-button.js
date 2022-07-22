@@ -1,5 +1,10 @@
 export default {
   name: 'DlButton',
+  // data() {
+  //   return {
+  //     styles: '',
+  //   };
+  // },
   props: {
     type: {
       default: 'default',
@@ -22,8 +27,31 @@ export default {
     nativeType: {
       default: 'button',
     },
-    icon: {
+    bheight: {
+      default: '63px',
+    },
+    bwidth: {
+      default: '300px',
+    },
+    classList: {
       default: '',
     },
   },
+  // methods: {
+  //   getStyle() {
+  //     return `style="${
+  //       this.bwidth
+  //         ? 'width:' + this.bwidth
+  //         : '' + (this.bheight ? '; height:' + this.bheight : '')
+  //     }"`;
+  //   },
+  // },
+  // computed: {
+  //   getStyles() {
+  //     return this.styles;
+  //   },
+  // },
+  // created() {
+  //   this.styles = this.getStyle();
+  // },
 };
