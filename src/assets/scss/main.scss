@@ -1,22 +1,23 @@
 /**********
 /* NORMALIZE */
-@import "./normalize.scss";
+@import './normalize.scss';
 
 /**********
 /* BASE */
-@import "base/base";
+@import 'base/base';
 
 /**********
 /* COMPONENTS */
-@import "./components/dl-header.scss";
-@import "./components/dl-nav.scss";
+@import './components/dl-header.scss';
+@import './components/dl-nav.scss';
+@import './components/dl-slider.scss';
 
 /**********
 /* ELEMENTS */
-@import "./elements/_dl-logo.scss";
-@import "./elements/_dl-stat.scss";
-@import "./elements/_dl-button.scss";
+@import './elements/_dl-logo.scss';
+@import './elements/_dl-stat.scss';
+@import './elements/_dl-button.scss';
 
 /**********
 /* FONTS */
-@import "./fonts.scss";
+@import './fonts.scss';

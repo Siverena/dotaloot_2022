@@ -1,5 +1,6 @@
 <template>
   <main>
-    <div class="home">Кейсы</div>
+    <DlSlider />
   </main>
 </template>
+<script src="./cases-page.js"></script>

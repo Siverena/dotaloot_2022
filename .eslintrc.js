@@ -2,13 +2,20 @@ module.exports = {
   root: true,
   env: {
     node: true,
+    es6: true,
   },
   extends: [
+    'prettier',
     'plugin:vue/vue3-essential',
     'eslint:recommended',
     'plugin:prettier/recommended',
   ],
   parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 'latest',
+    sourceType: 'module',
     parser: '@babel/eslint-parser',
   },
   rules: {
