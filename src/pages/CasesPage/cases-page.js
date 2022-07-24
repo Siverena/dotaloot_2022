@@ -4,6 +4,8 @@ import DlBunnerFreeItem from '@/components/dl-bunner-free-item/DlBunnerFreeItem.
 import DlEvents from '@/components/dl-events/DlEvents.vue';
 import DlTrust from '@/components/dl-trust/DlTrust.vue';
 import DlSlider from '@/components/dl-slider/dLSlider.vue';
+import DlReviews from '@/components/dl-reviews/DlReviews.vue';
+
 import DlButton from '@/elements/dl-button/DlButton.vue';
 
 export default {
@@ -16,5 +18,6 @@ export default {
     DlTrust,
     DlSlider,
     DlButton,
+    DlReviews,
   },
 };

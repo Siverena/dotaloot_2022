@@ -5,6 +5,7 @@ import CasesPage from '../pages/CasesPage/CasesPage.vue';
 import ContactsPage from '../pages/ContactsPage/ContactsPage.vue';
 import PromotionPage from '../pages/PromotionPage/PromotionPage.vue';
 import PartnerPage from '../pages/PartnerPage/PartnerPage.vue';
+import ContractsPage from '@/pages/ContractsPage/contracts-page';
 
 const routes = [
   {
@@ -23,8 +24,13 @@ const routes = [
     component: ContactsPage,
   },
   {
-    path: '/promoution',
-    name: 'promoution',
+    path: '/contracts',
+    name: 'contracts',
+    component: ContractsPage,
+  },
+  {
+    path: '/promotion',
+    name: 'promotion',
     component: PromotionPage,
   },
   {
