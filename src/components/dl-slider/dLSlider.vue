@@ -1,5 +1,5 @@
 <template>
-  <carousel :autoplay="false" :autoplay-speed="9000" :speed="1000">
+  <carousel :autoplay="true" :autoplay-speed="9000" :speed="1000">
     <div class="dl-slide dl-slide--get-gift">
       <div class="dl-slide__wrapper">
         <p class="dl-slide__head">получи <span>подарок</span></p>

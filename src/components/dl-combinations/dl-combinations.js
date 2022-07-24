@@ -17,6 +17,7 @@ export default {
           countLeft: '345',
           contAll: '555',
           tag: 'новое',
+          imgSrc: require('../../assets/img/dl-combinations/combinations/orange.png'),
         },
         {
           name: 'Cold Snap',
@@ -26,6 +27,7 @@ export default {
           countLeft: '85',
           contAll: '5',
           tag: 'выгодное',
+          imgSrc: require('../../assets/img/dl-combinations/combinations/rare.png'),
         },
         {
           name: 'EMP',
@@ -35,6 +37,7 @@ export default {
           countLeft: '25525',
           contAll: '4554544',
           tag: 'приятное',
+          imgSrc: require('../../assets/img/dl-combinations/combinations/legendary.png'),
         },
         {
           name: 'Tornado',
@@ -44,6 +47,7 @@ export default {
           countLeft: '25',
           contAll: '54443',
           tag: ' избранным',
+          imgSrc: require('../../assets/img/dl-combinations/combinations/mythical.png'),
         },
         {
           name: 'Chaos Meteor',
@@ -53,6 +57,7 @@ export default {
           countLeft: '45824',
           contAll: '515056',
           tag: 'хит',
+          imgSrc: require('../../assets/img/dl-combinations/combinations/season.png'),
         },
       ],
     };

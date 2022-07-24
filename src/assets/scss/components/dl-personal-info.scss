@@ -1,9 +1,220 @@
-.dl-personal-info{
+.dl-personal-info {
     display: grid;
     grid-template-columns: repeat(auto-fill, 410px);
     justify-content: space-between;
-    &__block{
+    row-gap: 42px;
+    margin-bottom: 56px;
+    &__block {
         background: $grey;
         border-radius: 17px;
+        padding: 17px 20px;
+        display: flex;
+        align-items: center;
+        &-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        &-header {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            text-transform: uppercase;
+
+            color: $white;
+        }
+        &-text {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+
+            color: $light-gray;
+        }
+    }
+}
+.balance {
+    &__img {
+        margin-right: 29px;
+        width: 136px;
+        height: 100px;
+    }
+
+    &__currency {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-transform: uppercase;
+        position: relative;
+        padding-left: 35px;
+        display: flex;
+        align-items: center;
+        &--rub {
+            color: #94f378;
+
+            &::before {
+                content: "";
+                background-image: url(../assets/img/dl-personal-info/rub.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 47px;
+                height: 55px;
+                position: absolute;
+                left: -8px;
+            }
+        }
+        &--mana {
+            color: #3bc1ee;
+            &::before {
+                content: "";
+                background-image: url(../assets/img/dl-personal-info/mana.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                width: 47px;
+                height: 55px;
+                position: absolute;
+                left: -8px;
+            }
+        }
+    }
+    &__button {
+        border-radius: 10px;
+        width: 140px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        border: none;
+    }
+}
+.lovely {
+    &__content {
+    }
+    &__img {
+        margin-left: auto;
+    }
+    &__button {
+        width: 140px;
+        height: 32px;
+        border-radius: 10px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        justify-content: center;
+    }
+}
+.drop {
+    &__price {
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 30px;
+        text-transform: uppercase;
+
+        color: $green;
+    }
+    &__img {
+        margin-left: auto;
+        border: 4px solid $orange;
+        border-radius: 7px;
+        box-shadow: 0px 0px 24px 0px #ff0c0c;
+    }
+}
+.partner {
+    position: relative;
+    &__button {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        justify-content: center;
+        width: 140px;
+        height: 30px;
+        border-radius: 10px;
+        text-decoration: none;
+    }
+    &__content {
+        padding: 9px 0px;
+    }
+    &__header {
+        margin-bottom: 16px;
+    }
+    &::after {
+        position: absolute;
+        bottom: -46px;
+        right: -32px;
+        content: "";
+        width: 262px;
+        height: 198px;
+        background-image: url(../assets/img/dl-personal-info/partner.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+.trade {
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    align-content: space-between;
+    justify-content: space-between;
+    align-items: stretch;
+    &__row {
+        display: flex;
+    }
+    &__link {
+        background: #0e0e0e;
+        border-radius: 10px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+        text-decoration-line: underline;
+        text-transform: uppercase;
+        color: #9d9d9d;
+        padding: 9px 20px;
+        border: navajowhite;
+        flex-grow: 1;
+
+        &:active {
+            outline: none;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    &__button {
+        border-radius: 10px;
+        width: 158px;
+        height: 35px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        text-transform: uppercase;
+        justify-content: center;
+        color: #0e0e0e;
+        margin-left: 27px;
     }
 }

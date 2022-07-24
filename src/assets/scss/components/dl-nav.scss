@@ -1,44 +1,61 @@
 .dl-nav {
-height: 100%;
-min-height: 90px;
+  height: 100%;
+  min-height: 90px;
 
+  display: flex;
+  &__item {
+    font-weight: bold;
+    color: $light-gray;
     display: flex;
-    &__item {
-      font-weight: bold;
-      color: $light-gray;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding:  0 15px 0 5px ; 
-      text-decoration: none;
-      height: 100%;
-      min-height: 90px;
-      align-items: center;
-      text-transform: uppercase;
-      font-size: 14px;
-      fill: $light-gray;
-      svg{
-        margin-right: 12px;
-        flex-shrink: 0;
-        width: 18px;
-        height: 18px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px 0 5px;
+    text-decoration: none;
+    height: 100%;
+    min-height: 90px;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    fill: $light-gray;
+    &--header-tablet {
+      display: none;
+    }
+    svg {
+      margin-right: 12px;
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      fill: inherit;
+      path {
         fill: inherit;
-        path{
-            fill: inherit;
+      }
+    }
+    &.router-link-exact-active {
+      $color: $orange;
+      color: $color;
+      text-decoration: none;
+      outline: none;
+      fill: $orange;
+      svg {
+        fill: inherit;
+        path {
+          fill: inherit;
         }
-      }  
-      &.router-link-exact-active {
-        $color: $orange;
-        color: $color;
-        text-decoration: none;
-        outline: none;
-        fill: $orange;
-        svg{
-            fill: inherit;
-            path{
-                fill: inherit;
-            }
-          } 
       }
     }
   }
+}
+@media (max-width: 1440px) {
+  .dl-nav {
+    &--menu {
+      display: none;
+    }
+  }
+}
+@media (max-width: 833px) {
+  .dl-nav {
+    &--header-tablet {
+      display: none;
+    }
+  }
+}

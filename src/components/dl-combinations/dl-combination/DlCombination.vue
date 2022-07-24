@@ -1,11 +1,7 @@
 <template>
   <div class="dl-combination">
     <div class="dl-combination__header">
-      <img
-        :src="'./combinations/' + combination.color + '.png'"
-        alt=""
-        class="dl-combination__img"
-      />
+      <img :src="combination.imgSrc" alt="" class="dl-combination__img" />
       <span class="dl-combination__name">{{ combination.name }}</span>
     </div>
     <div class="dl-combination__content">
