@@ -8,6 +8,7 @@ import PartnerPage from '../pages/PartnerPage/PartnerPage.vue';
 import ContractPage from '../pages/ContractPage/ContractPage.vue';
 import UpgradePage from '../pages/UpgradePage/UpgradePage.vue';
 
+
 const routes = [
   {
     path: '/',
@@ -25,8 +26,13 @@ const routes = [
     component: ContactsPage,
   },
   {
-    path: '/promoution',
-    name: 'promoution',
+    path: '/contracts',
+    name: 'contracts',
+    component: ContractsPage,
+  },
+  {
+    path: '/promotion',
+    name: 'promotion',
     component: PromotionPage,
   },
   {
