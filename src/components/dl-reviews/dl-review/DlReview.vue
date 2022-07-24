@@ -13,7 +13,7 @@
     </div>
     <div class="dl-review__item">
       <img :src="review.item.img" alt="" />
-      <div class="dl-review__item-price">{{ item.price }}</div>
+      <div class="dl-review__item-price">{{ item.price }} ₽</div>
     </div>
   </div>
 </template>
