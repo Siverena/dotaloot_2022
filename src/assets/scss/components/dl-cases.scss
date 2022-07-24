@@ -1,6 +1,6 @@
-.dl-cases{
+.dl-cases {
     margin-bottom: 91px;
-    &__wrap{
+    &__wrap {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(auto-fill, 230px);
@@ -8,9 +8,8 @@
         justify-content: space-between;
         margin: 0 auto;
     }
-   
 }
-.dl-case{
+.dl-case {
     background: #232226;
     border-radius: 30px;
     display: flex;
@@ -20,59 +19,62 @@
     color: $white;
     margin-bottom: 48px;
 
-    &__tag{
+    &__tag {
         border-radius: 5px;
-       
+
         font-style: normal;
         font-weight: 700;
         font-size: 12px;
         line-height: 15px;
         width: 107px;
         height: 28px;
-        &__content{
+        &__content {
             width: 100%;
             height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            &--count{
+            &--count {
                 text-decoration-line: underline;
                 background: rgba(255, 255, 255, 0.05);
-                span{
+                span {
                     color: $orange;
                     text-decoration-line: underline;
                 }
             }
-            &--new, &--top{
-                color:$orange;
+            &--new,
+            &--top {
+                color: $orange;
                 background: rgba(255, 139, 0, 0.1);
                 text-transform: uppercase;
-                svg{
+                svg {
                     margin-right: 2px;
                 }
             }
         }
-
-       
     }
-    &__text{
+    &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    &__text {
         text-align: center;
     }
-    &__name{
+    &__name {
         font-style: normal;
         font-weight: 800;
         font-size: 15px;
         line-height: 18px;
 
-
         color: $white;
         margin: 0 0 13px 0;
+    }
+    &__get {
+    }
 
-    }
-    &__get{
-        
-    }
-    &__money{
+    &__money {
         width: 150px;
         height: 34px;
         position: relative;
@@ -85,29 +87,29 @@
         align-items: center;
         text-align: center;
         text-decoration-line: line-through;
-        color: #FFFFFF;
+        color: #ffffff;
         background: rgba(0, 0, 0, 0.2);
-        span{
+        span {
             margin: 0 auto;
-                }
-        div{
+        }
+        div {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             padding: 7px 14px;
             gap: 10px;
-            
+
             position: absolute;
             width: 73px;
             height: 35px;
             right: 0;
-            
+
             background: $green;
             border-radius: 15px;
         }
     }
-    &__mana{
+    &__mana {
         width: 150px;
         height: 34px;
         position: relative;
@@ -120,31 +122,31 @@
         align-items: center;
         text-align: center;
         text-transform: uppercase;
-        
+
         color: $blue;
         background: rgba(0, 115, 164, 0.13);
-        span{
+        span {
             margin: 0 auto;
         }
-        div{
+        div {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             padding: 7px 14px;
             gap: 10px;
-            
+
             position: absolute;
             width: 73px;
             height: 35px;
             right: 0;
-            
+
             background: $blue;
             border-radius: 15px;
-            color: #FFFFFF;
+            color: #ffffff;
         }
     }
-     &__gift{
+    &__gift {
         font-style: normal;
         font-weight: 900;
         font-size: 19px;
@@ -153,19 +155,80 @@
         align-items: center;
         justify-content: center;
 
-        color: #FF8B00;
-        svg{
+        color: $orange;
+        svg {
             margin-left: 9px;
         }
     }
-    &__free{
+    &__free {
         font-style: normal;
         font-weight: 900;
         font-size: 21px;
         line-height: 47px;
 
-
-        color: #FF8B00;
+        color: $orange;
     }
+}
 
+@media (max-width: 1440px) {
+}
+@media (max-width: 833px) {
+    .dl-cases {
+        &__wrap {
+            grid-template-columns: repeat(auto-fill, 165px);
+        }
+    }
+    .dl-case {
+        padding: 8px 0 10px;
+        &__tag {
+            width: 68px;
+            height: 17px;
+        }
+        &__money {
+            width: 134px;
+            height: 25px;
+            padding-right: 67px;
+            div {
+                padding: 3px 13px;
+                width: 67px;
+                height: 25px;
+                border-radius: 8px;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 18px;
+            }
+        }
+        &__image {
+            img {
+                width: 100%;
+            }
+        }
+        &__mana {
+            width: 134px;
+            height: 25px;
+            padding-right: 67px;
+            div {
+                padding: 3px 12px;
+                width: 67px;
+                height: 25px;
+                border-radius: 8px;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 18px;
+            }
+        }
+        &__gift {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 18px;
+            svg {
+                margin-left: 9px;
+            }
+        }
+        &__free {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 18px;
+        }
+    }
 }

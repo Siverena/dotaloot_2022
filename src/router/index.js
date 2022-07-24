@@ -5,7 +5,9 @@ import CasesPage from '../pages/CasesPage/CasesPage.vue';
 import ContactsPage from '../pages/ContactsPage/ContactsPage.vue';
 import PromotionPage from '../pages/PromotionPage/PromotionPage.vue';
 import PartnerPage from '../pages/PartnerPage/PartnerPage.vue';
-import ContractsPage from '@/pages/ContractsPage/contracts-page';
+import ContractPage from '../pages/ContractPage/ContractPage.vue';
+import UpgradePage from '../pages/UpgradePage/UpgradePage.vue';
+
 
 const routes = [
   {
@@ -43,11 +45,24 @@ const routes = [
     name: 'partner',
     component: PartnerPage,
   },
+  {
+    path: '/contract',
+    name: 'contract',
+    component: ContractPage,
+  },
+  {
+    path: '/upgrade',
+    name: 'upgrade',
+    component: UpgradePage,
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  scrollBehavior() {
+    return { top: 0 };
+  },
 });
 
 export default router;

@@ -53,13 +53,11 @@ export default {
           break;
         case 'everyweek':
           this.deadline = this.startOfNextWeek();
-          console.log('everyweek ', this.deadline);
           break;
         case 'everymonth':
           now.getMonth();
 
           this.deadline = this.startOfNextMonth();
-          console.log('everymonwrthwrh ', this.deadline);
           break;
         default:
           this.deadline = this.nowDay;

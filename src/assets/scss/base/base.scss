@@ -1,28 +1,50 @@
-body{
-  background-color:$dark-gray;
+body {
+  background-color: $dark-gray;
   background-image: url(../assets/img/site-bg.png);
   background-repeat: no-repeat;
   background-position: right bottom;
-
-
 }
-main{
+main {
   flex-grow: 1;
 }
-.container{
+.container {
   width: 1440px;
   padding: 0 49px;
   margin: 0 auto;
 }
-#app {
-    font-family: Inter;
-    // font-family: Inter, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    min-height: 100vh;
-
+@media (max-width: 1440px) {
+  .container {
+    width: 833px;
+    padding: 0 36px;
+    margin: 0 auto;
   }
-  
+}
+@media (max-width: 833px) {
+  .container {
+    width: 370px;
+    padding: 0 10px;
+    margin: 0 auto;
+  }
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+#app {
+  font-family: Inter;
+  // font-family: Inter, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 100vh;
+}

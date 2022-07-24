@@ -10,19 +10,19 @@ export default {
     return {
       events: [
         {
-          imgSrc: './events/event1.jpg',
-          nameEvent: 'Восстание тьмы/Хеллоуин',
+          nameEvent: 'Восстание тьмы/ Хеллоуин',
           price: '110',
+          imgSrc: require('../../assets/img/dl-events/events/event1.jpg'),
         },
         {
-          imgSrc: './events/event2.jpg',
-          nameEvent: 'Холодрыжество/Frostivus',
+          nameEvent: 'Холодрыжество/ Frostivus',
           price: '150',
+          imgSrc: require('../../assets/img/dl-events/events/event2.jpg'),
         },
         {
-          imgSrc: './events/event3.jpg',
-          nameEvent: 'Новоцвет/new bloom',
+          nameEvent: 'Новоцвет/ new bloom',
           price: '300',
+          imgSrc: require('../../assets/img/dl-events/events/event3.jpg'),
         },
       ],
     };
