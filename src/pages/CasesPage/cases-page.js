@@ -1,6 +1,6 @@
 import DlRaffles from '@/components/dl-raffles/DlRaffles.vue';
 import DlCases from '@/components/dl-cases/DlCases.vue';
-import DlBunnerFreeItem from '@/components/dl-bunner-free-item/DlBunnerFreeItem.vue';
+import DlBannerFreeItem from '@/components/dl-banner-free-item/DlBannerFreeItem.vue';
 import DlEvents from '@/components/dl-events/DlEvents.vue';
 import DlTrust from '@/components/dl-trust/DlTrust.vue';
 import DlQuests from '@/components/dl-quests/DlQuests.vue';
@@ -13,13 +13,12 @@ export default {
   components: {
     DlRaffles,
     DlCases,
-    DlBunnerFreeItem,
+    DlBannerFreeItem,
     DlEvents,
     DlTrust,
     DlSlider,
     DlButton,
     DlQuests,
     DlReviews,
-
   },
 };

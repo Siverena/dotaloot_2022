@@ -7,7 +7,9 @@ import PromotionPage from '../pages/PromotionPage/PromotionPage.vue';
 import PartnerPage from '../pages/PartnerPage/PartnerPage.vue';
 import ContractPage from '../pages/ContractPage/ContractPage.vue';
 import UpgradePage from '../pages/UpgradePage/UpgradePage.vue';
-
+import PolicyPage from '../pages/PolicyPage/PolicyPage.vue';
+import CookiePage from '../pages/CookiePage/CookiePage.vue';
+import HelpPage from '../pages/HelpPage/HelpPage.vue';
 
 const routes = [
   {
@@ -24,11 +26,6 @@ const routes = [
     path: '/contacts',
     name: 'contacts',
     component: ContactsPage,
-  },
-  {
-    path: '/contracts',
-    name: 'contracts',
-    component: ContractsPage,
   },
   {
     path: '/promotion',
@@ -54,6 +51,22 @@ const routes = [
     path: '/upgrade',
     name: 'upgrade',
     component: UpgradePage,
+  },
+  {
+    path: '/policy',
+    name: 'policy',
+    component: PolicyPage,
+  },
+  {
+    path: '/сookie',
+    name: 'сookie',
+    component: CookiePage,
+  },
+
+  {
+    path: '/help',
+    name: 'help',
+    component: HelpPage,
   },
 ];
 

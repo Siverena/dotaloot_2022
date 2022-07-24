@@ -39,7 +39,7 @@
     </DlStat>
     <DlNav />
     <router-link
-      to="/promoution"
+      to="/promotion"
       class="dl-nav__item dl-nav__item--header-tablet"
       ><svg
         width="80"

@@ -4,7 +4,7 @@
     <DlRaffles />
     <DlCases>Актуальные кейсы</DlCases>
     <DlCases>Особые кейсы</DlCases>
-    <DlBunnerFreeItem />
+    <DlBannerFreeItem />
     <DlCases>КЕЙСЫ ПО РЕДКОСТИ </DlCases>
     <DlEvents />
     <DlCases>КЕЙСЫ ЗА МАННУ</DlCases>

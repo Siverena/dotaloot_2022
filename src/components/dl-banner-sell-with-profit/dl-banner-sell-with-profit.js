@@ -1,5 +1,5 @@
 export default {
-  name: 'DlBunnerSellWithProfit',
+  name: 'DlBannerSellWithProfit',
   components: {},
   data() {
     return {};

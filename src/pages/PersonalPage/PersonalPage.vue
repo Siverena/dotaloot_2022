@@ -4,7 +4,7 @@
       >gury mcflury</DlSectionHeader
     >
     <DlPersonalInfo />
-    <DlBunnerSellWithProfit />
+    <DlBannerSellWithProfit />
 
     <div class="dl-profile__filter"></div>
   </div>

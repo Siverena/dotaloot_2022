@@ -1,5 +1,5 @@
 export default {
-  name: 'DlBunnerFreeItem',
+  name: 'DlBannerFreeItem',
   components: {},
   data() {
     return {};
