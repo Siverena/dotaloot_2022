@@ -16,7 +16,7 @@
 
       Кейсы</router-link
     >
-    <router-link to="/about" class="dl-nav__item"
+    <router-link to="/contracts" class="dl-nav__item"
       ><svg
         width="64"
         height="75"
@@ -54,7 +54,7 @@
       </svg>
       Апгрейды</router-link
     >
-    <router-link to="/promoution" class="dl-nav__item"
+    <router-link to="/promotion" class="dl-nav__item"
       ><svg
         width="80"
         height="80"

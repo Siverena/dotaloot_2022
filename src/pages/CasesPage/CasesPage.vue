@@ -8,6 +8,7 @@
     <DlCases>КЕЙСЫ ПО РЕДКОСТИ </DlCases>
     <DlEvents />
     <DlCases>КЕЙСЫ ЗА МАННУ</DlCases>
+    <DlReviews />
     <DlTrust />
   </div>
 </template>
