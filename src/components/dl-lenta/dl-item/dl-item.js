@@ -3,6 +3,9 @@
 export default {
   name: 'DlItem',
   props: ['drop'],
+  mounted() {
+    console.log(this.drop);
+  },
 };
 // const DlItemBase = Vue.component({ props: ['drop'] });
 // const DlItemLoading = Vue.component({

@@ -4,7 +4,7 @@
     <div
       class="dl-drophistory-item__content"
       :style="{
-        'border-color': '#D32CE6',
+        'border-color': '#' + drop.item_color,
         'box-shadow': 'inset 0px -22px 15px 4px rgba(211, 44, 230, 0.3)',
         'background-image': `url(${
           drop.item_type === 'money'

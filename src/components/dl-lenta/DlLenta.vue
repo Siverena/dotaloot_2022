@@ -38,10 +38,8 @@
       </div>
     </div>
     <div class="dl-drophistory">
-      <div v-if="getLoading">loading</div>
-      <div v-else class="dl-drophistory__items">
-        <DlItem v-for="drop in getDrops" :key="drop.drop_id" />
-      </div>
+      <DlLoader v-if="loading" />
+      <DlItems v-else :drops="drops" />
     </div>
   </section>
 </template>
