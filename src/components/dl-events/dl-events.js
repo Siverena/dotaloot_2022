@@ -11,17 +11,17 @@ export default {
       events: [
         {
           nameEvent: 'Восстание тьмы/ Хеллоуин',
-          price: '110',
+          price: '1101',
           imgSrc: require('../../assets/img/dl-events/events/event1.jpg'),
         },
         {
           nameEvent: 'Холодрыжество/ Frostivus',
-          price: '150',
+          price: '1501',
           imgSrc: require('../../assets/img/dl-events/events/event2.jpg'),
         },
         {
           nameEvent: 'Новоцвет/ new bloom',
-          price: '300',
+          price: '3001',
           imgSrc: require('../../assets/img/dl-events/events/event3.jpg'),
         },
       ],

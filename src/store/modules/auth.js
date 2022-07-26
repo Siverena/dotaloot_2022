@@ -20,6 +20,7 @@ export default {
     logout(ctx) {
       let status = false;
       ctx.commit('CHANGE_AUTH', status);
+      this.$router.push('/');
     },
   },
 };

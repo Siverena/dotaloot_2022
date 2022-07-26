@@ -78,4 +78,12 @@ const router = createRouter({
   },
 });
 
+// https://mylinuxconfig.com/tutorial/how-to-add-loading-indicators-to-a-vue-js-application#1
+
+// router.beforeResolve((next) => {
+//   next();
+// });
+
+// router.afterEach(() => {});
+
 export default router;

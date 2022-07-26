@@ -11,16 +11,16 @@ export default {
       cases: [
         {
           tag: 'count',
-          price: '110',
-          oldPrice: '140',
+          price: '1105',
+          oldPrice: '1401',
           name: 'С насмешкой',
           imgSrc: require('../../assets/img/dl-cases/cases/case1.png'),
           money: true,
         },
         {
           tag: 'new',
-          price: '110',
-          oldPrice: '140',
+          price: '1103',
+          oldPrice: '1404',
           name: 'С насмешкой',
           imgSrc: require('../../assets/img/dl-cases/cases/case2.png'),
           mana: true,
