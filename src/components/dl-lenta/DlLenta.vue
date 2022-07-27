@@ -38,8 +38,8 @@
       </div>
     </div>
     <div class="dl-drophistory">
-      <DlLoader v-if="loading" />
-      <DlItems v-else :drops="drops" />
+      <!-- <DlLoader v-if="loading" /> -->
+      <DlItems :drops="itemType === 'total' ? live_drops : top_drops" />
     </div>
   </section>
 </template>

@@ -4,7 +4,13 @@ import Axios from 'axios';
 export default {
   name: 'DlLenta',
   data() {
-    return { itemType: 'total', drops: [], loading: true };
+    return {
+      itemType: 'total',
+      drops: [],
+      loading: true,
+      live_drops: [],
+      top_drops: [],
+    };
   },
   components: {
     DlItems,
@@ -25,7 +31,12 @@ export default {
       this.loading = true;
       Axios.post('https://dotaloot.co/api/drop/get', { type: this.itemType })
         .then((response) => {
-          console.log('response: ', response);
+          if (this.itemType === 'total') {
+            this.live_drops = response.data.drops;
+          } else {
+            this.top_drops = response.data.drops;
+          }
+
           this.drops = response.data.drops;
           this.loading = false;
         })
