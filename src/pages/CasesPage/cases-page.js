@@ -7,8 +7,8 @@ import DlQuests from '@/components/dl-quests/DlQuests.vue';
 import DlSlider from '@/components/dl-slider/dLSlider.vue';
 import DlReviews from '@/components/dl-reviews/DlReviews.vue';
 import DlLoader from '@/components/dl-loader/DlLoader.vue';
-import DlButton from '@/elements/dl-button/DlButton.vue';
 import Axios from 'axios';
+
 export default {
   name: 'CasesPage',
   components: {
@@ -18,7 +18,6 @@ export default {
     DlEvents,
     DlTrust,
     DlSlider,
-    DlButton,
     DlQuests,
     DlReviews,
     DlLoader,

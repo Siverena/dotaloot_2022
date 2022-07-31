@@ -1,11 +1,34 @@
 import DlRaffle from './dl-raffle/DlRaffle.vue';
+import DlSectionHeader from '@/elements/dl-section-header/DlSectionHeader.vue';
+import { VueAgile } from 'vue-agile';
+import { mapGetters } from 'vuex';
 export default {
   name: 'DlRaffles',
   components: {
     DlRaffle,
+    carousel: VueAgile,
+    DlSectionHeader,
   },
   data() {
     return {
+      // carouselOptions: {
+      //   // slidesToShow: 3,
+      //   navButtons: false,
+      //   dots: false,
+      //   autoplay: false,
+      //   autoplaySpeed: 9000,
+      //   speed: 1000,
+      //   mobileFirst: false,
+      // responsive: [
+      //   {
+      //     breakpoint: 833,
+      //     settings: {
+      //       slidesToShow: 1,
+      //       dots: true,
+      //     },
+      //   },
+      // ],
+      // },
       raffles: [
         {
           itemName: 'Feast of Abscession',
@@ -33,5 +56,29 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    ...mapGetters(['isMobileVersion']),
+  },
+  beforeCreate() {
+    if (this.isMobileVersion) {
+      this.carouselOptions.slidesToShow = 1;
+      this.carouselOptions.dots = true;
+    }
+  },
+  computed: {
+    slidesToShow() {
+      return this.isMobileVersion() ? 1 : 3;
+    },
+    carouselOptions() {
+      return {
+        slidesToShow: this.isMobileVersion() ? 1 : 3,
+        navButtons: false,
+        dots: this.isMobileVersion(),
+        autoplay: false,
+        autoplaySpeed: 9000,
+        speed: 1000,
+      };
+    },
   },
 };

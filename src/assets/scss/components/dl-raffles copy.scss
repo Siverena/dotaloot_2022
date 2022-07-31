@@ -23,7 +23,7 @@
 
   &__name {
     position: absolute;
-    bottom: 5px;
+    bottom: -3px;
     font-style: normal;
     font-weight: 800;
     font-size: 11px;
@@ -34,17 +34,6 @@
     text-transform: uppercase;
     // color: #0CBCF5;
     text-align: center;
-  }
-  &__bottom {
-    position: absolute;
-    top: 27px;
-    width: 402px;
-    height: 118px;
-    filter: blur(11px);
-    border-radius: 152px;
-    z-index: 1;
-    display: flex;
-    opacity: 0.3;
   }
   &__top {
     width: 100%;
@@ -95,8 +84,6 @@
   &__content {
     width: 202px;
     margin-left: auto;
-    display: flex;
-    flex-direction: column;
   }
   &__item-name-wrap {
     position: relative;
@@ -155,7 +142,7 @@
     display: flex;
     align-items: center;
     color: $light-gray;
-    margin-bottom: auto;
+    margin-bottom: 9px;
   }
   &__time {
     font-style: normal;
@@ -165,16 +152,13 @@
     display: flex;
     align-items: center;
     color: $white;
-    margin-top: auto;
   }
   &__clock {
     margin-right: 11px;
   }
 }
 .dl-raffle.everyday {
-  .dl-raffle__bottom {
-    background: $blue;
-  }
+  background-image: radial-gradient(rgba(0, 203, 254, 0.7), transparent 80%);
   .dl-raffle__name {
     color: $blue;
   }
@@ -189,9 +173,7 @@
   }
 }
 .dl-raffle.everyweek {
-  .dl-raffle__bottom {
-    background: $purple;
-  }
+  background-image: radial-gradient(rgba(211, 44, 230, 0.7), transparent 80%);
   .dl-raffle__name {
     color: $purple;
   }
@@ -206,9 +188,7 @@
   }
 }
 .dl-raffle.everymonth {
-  .dl-raffle__bottom {
-    background: $green;
-  }
+  background-image: radial-gradient(rgba(73, 179, 44, 0.7), transparent 80%);
   .dl-raffle__name {
     color: $green;
   }
@@ -227,9 +207,7 @@
 /**********Адаптив планшет*******/
 @media (max-width: 1440px) {
   .dl-raffles {
-    &__wrapper {
-      grid-template-columns: repeat(auto-fill, 244px);
-    }
+    grid-template-columns: repeat(auto-fill, 244px);
   }
   .dl-raffle {
     width: 244px;
@@ -238,10 +216,9 @@
     background-position: center bottom -1px;
     padding: 0 0 10px 0;
     &__bottom {
-      width: 236px;
-      height: 78px;
-      top: 16px;
-      filter: blur(8px);
+      width: 259px;
+      height: 77px;
+      top: 18px;
     }
     &__top {
       padding: 14px 16px;
@@ -250,8 +227,8 @@
       width: 130px;
     }
     &__img-wrap {
-      width: 75px;
-      height: auto;
+      width: 84px;
+      height: 57px;
     }
     &__img-tools {
       font-size: 7px;
@@ -276,7 +253,6 @@
     &__name {
       font-size: 9px;
       line-height: 11px;
-      bottom: -3px;
     }
   }
 }
@@ -287,19 +263,12 @@
   .dl-raffles {
     // display: block;
     // grid-template-columns: none;
-    &__wrapper {
-      grid-template-columns: repeat(auto-fill, 100%);
-      display: block;
-    }
+    grid-template-columns: repeat(auto-fill, 100%);
     .agile {
       &__dots {
         @include dl-agile-dots;
         margin: 34px auto 0;
         bottom: 26px;
-      }
-      &__list {
-        overflow: clip;
-        overflow-clip-margin: 4px;
       }
       &__dot {
         @include dl-agile-dot;
@@ -310,42 +279,19 @@
     width: 100%;
     height: 129px;
     overflow: visible;
-    padding: 0 5px;
     &__bottom {
       width: 345px;
       height: 103px;
-      top: 25px;
-      left: 0;
-      right: 0;
-      margin: 0 auto;
-      filter: blur(7px);
+      top: 24px;
     }
     &__top {
       height: 116px;
-      padding: 19px 21px;
     }
     &__img-wrap {
-      width: 114px;
-      height: 77px;
-    }
-    &__content {
-      margin-left: 25px;
-      width: 179px;
-    }
-    &__item-name {
-      font-size: 14px;
-      line-height: 17px;
-    }
-    &__info {
-      font-size: 10px;
-      line-height: 12px;
-    }
-    &__clock {
-      width: 19px;
-      height: 19px;
+      width: 84px;
+      height: 57px;
     }
     &__name {
-      bottom: -3px;
       position: relative;
       bottom: auto;
       justify-content: center;

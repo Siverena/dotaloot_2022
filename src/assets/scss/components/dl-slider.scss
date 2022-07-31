@@ -30,19 +30,21 @@
       }
     }
     &__dots {
-      justify-content: center;
+      @include dl-agile-dots;
       margin: 0 auto;
-      padding: 0;
-      width: 100%;
-      background: transparent no-repeat center;
       position: absolute;
-      bottom: 26px;
+      bottom: 25px;
       &::after {
-        content: "";
+        content: '';
         display: block;
         width: 100%;
         position: absolute;
-        background-image: linear-gradient(to right, transparent, $orange, transparent);
+        background-image: linear-gradient(
+          to right,
+          transparent,
+          $orange,
+          transparent
+        );
         height: 2px;
         bottom: -15px;
         left: 0;
@@ -50,59 +52,115 @@
       }
     }
     &__dot {
-      margin: 0 4px;
-      & button {
-        color: white;
-        display: block;
-        width: 8px;
-        height: 7px;
-        padding: 0;
-        background-color: rgba(0, 0, 0, 0.6);
-        border: none;
-      }
-      &--current button,
-      &:hover button {
-        background-color: $orange;
-      }
+      @include dl-agile-dot;
     }
   }
 }
 .dl-slide {
   width: 100%;
-  &--get-gift {
-    text-transform: uppercase;
-    padding: 127px 474px 170px 887px;
-    background-image: url("@/assets/img/dl-slider/dl-slider1.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    .dl-slide__head {
-      color: $white;
-      font-family: "Inter";
-      font-style: normal;
-      font-weight: 900;
-      font-size: 86px;
-      line-height: 83.2%;
-      text-align: center;
-      & span {
-        font-size: 73px;
+}
+/***Стили для  слайда Получи подарок***/
+.dl-slide-get-gift {
+  text-transform: uppercase;
+  background-image: url('@/assets/img/dl-slider/dl-slider1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &__wrapper {
+    margin: 127px auto 170px 46.3%;
+    width: 572px;
+  }
+  &__head {
+    color: $white;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 86px;
+    line-height: 83.2%;
+    text-align: center;
+    & span {
+      font-size: 73px;
+    }
+  }
+  &__descr {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 97.2%;
+    color: $orange;
+    margin: 42px 0 24px;
+    display: flex;
+    justify-content: center;
+  }
+  &__btn {
+    width: 368px;
+    height: 62px;
+  }
+}
+/*** Конец стилей для Получи подарок***/
+
+@media (max-width: 1440px) {
+  .dl-slider {
+    height: 382px;
+    .agile {
+      &__dots {
+        bottom: 21px;
+        &::after {
+          bottom: -15px;
+        }
       }
     }
-    .dl-slide__descr {
-      font-style: italic;
-      font-weight: 600;
-      font-size: 36px;
+  }
+  .dl-slide-get-gift {
+    &__wrapper {
+      margin: 66px auto 101px 60%;
+      width: 208px;
+    }
+    &__head {
+      font-weight: 800;
+      font-size: 46px;
       line-height: 97.2%;
-      color: $orange;
-      margin: 42px 0 24px;
+      & span {
+        font-size: 39px;
+      }
+    }
+    &__descr {
+      font-weight: 600;
+      font-size: 21px;
+      line-height: 97.2%;
+    }
+    &__btn {
+      width: 208px;
+      height: 35px;
+      font-size: 14px;
+      line-height: 17px;
     }
   }
 }
 
-@media (max-width: 834px) {
-  .dl-slide {
-    padding: 100px 465px 170px 883px;
+@media (max-width: 833px) {
+  .dl-slider {
+    height: 407px;
   }
-}
-@media (max-width: 390px) {
+  .dl-slide-get-gift {
+    &__wrapper {
+      margin: 75px auto 120px;
+      width: 226px;
+    }
+    &__head {
+      font-size: 50px;
+      & span {
+        font-size: 42px;
+      }
+    }
+    &__descr {
+      font-size: 23px;
+    }
+    &__btn {
+      width: 208px;
+      height: 35px;
+      font-size: 13px;
+      line-height: 16px;
+    }
+  }
 }
