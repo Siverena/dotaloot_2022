@@ -1,4 +1,4 @@
-import DlUserItems from '@/components/dl-user-items/DlUserItems.vue';
+import DlUserItems from './dl-user-items/DlUserItems.vue';
 import DlFilter from '@/components/dl-filter/DlFilter.vue';
 export default {
   name: 'DlUserContents',
