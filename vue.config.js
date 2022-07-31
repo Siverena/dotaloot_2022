@@ -4,7 +4,6 @@ module.exports = defineConfig({
   outputDir: './build',
   publicPath: process.env.NODE_ENV === 'development' ? '/' : '/dotaloot_2022/',
   devServer: {
-    // historyApiFallback: true,
     historyApiFallback: {
       rewrites: [{ from: /./, to: '/' }],
     },

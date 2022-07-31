@@ -1,8 +1,5 @@
 <template>
-  <div class="dl-naw__wrapper">
-    <button class="dl-naw__open">
-      <span><span class="visually-hidden">Открыть меню</span></span>
-    </button>
+  <div class="dl-nav__wrapper">
     <nav class="dl-nav">
       <router-link to="/" class="dl-nav__item">
         <svg
@@ -81,6 +78,34 @@
         </svg>
         Акции</router-link
       >
+      <button
+        class="dl-nav__open"
+        @click="showMenu"
+        :class="isShow ? 'active' : ''"
+      >
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="22px"
+            height="22px"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M-0.000,-0.000 L22.000,-0.000 L22.000,4.000 L-0.000,4.000 L-0.000,-0.000 Z"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M-0.000,9.000 L22.000,9.000 L22.000,13.000 L-0.000,13.000 L-0.000,9.000 Z"
+            />
+            <path
+              fill-rule="evenodd"
+              d="M-0.000,18.000 L22.000,18.000 L22.000,22.000 L-0.000,22.000 L-0.000,18.000 Z"
+            />
+          </svg>
+          <span class="visually-hidden">Открыть меню</span></span
+        >
+      </button>
     </nav>
   </div>
 </template>

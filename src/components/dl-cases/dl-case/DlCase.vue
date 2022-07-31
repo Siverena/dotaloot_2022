@@ -79,24 +79,55 @@
 
         top
       </div>
+
+      <div
+        v-if="caseItem.tag === undefined"
+        class="dl-case__tag__content dl-case__tag__content--count"
+      >
+        <span>1111</span> / 9999
+      </div>
     </div>
 
     <div class="dl-case__image">
-      <img :src="caseItem.imgSrc" alt="" />
+      <img
+        :src="
+          caseItem.imgSrc
+            ? caseItem.imgSrc
+            : require(`@/assets/img/dl-cases/cases/case1.png`)
+        "
+        alt=""
+      />
     </div>
     <div class="dl-case__text">
       <p class="dl-case__name">{{ caseItem.name }}</p>
       <div class="dl-case__get">
-        <div v-if="caseItem.money" class="dl-case__money">
-          <span>{{ caseItem.oldPrice }} ₽</span>
+        <div
+          v-if="
+            caseItem.money || (catId !== 12 && catId !== 4 && catId !== 'test')
+          "
+          class="dl-case__money"
+        >
+          <span>
+            {{
+              Math.round(
+                (caseItem.price < 200
+                  ? Math.floor(caseItem.price * 1.3)
+                  : Math.floor(caseItem.price * 1.4)) / 10
+              ) * 10
+            }}
+
+            ₽</span
+          >
           <div>{{ caseItem.price }} ₽</div>
         </div>
-        <div v-if="caseItem.mana" class="dl-case__mana">
+        <div v-if="caseItem.mana || catId === 12" class="dl-case__mana">
           <span>Мана</span>
           <div>{{ caseItem.price }} &#11045;</div>
         </div>
-        <div v-if="caseItem.free" class="dl-case__free">БЕСПЛАТНО</div>
-        <div v-if="caseItem.gift" class="dl-case__gift">
+        <div v-if="caseItem.free || catId === 4" class="dl-case__free">
+          БЕСПЛАТНО
+        </div>
+        <div v-if="caseItem.gift || catId === 4" class="dl-case__gift">
           ПОДАРОЧНЫЙ
           <svg
             width="23"

@@ -1,8 +1,53 @@
 .dl-header {
-  width: 100%;
-  background-color: $dark-gray;
-  padding: 0px 85px;
-  display: flex;
-  align-items: center;
-  overflow-x: hidden;
+    width: 100%;
+    background-color: $dark-gray;
+
+    display: flex;
+    align-items: center;
+
+    &__online {
+        text-align: center;
+        margin: 0 20px;
+        &-count {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            text-transform: lowercase;
+            padding-left: 25px;
+            position: relative;
+            color: $orange;
+            &::before {
+                content: "";
+                width: 29px;
+                height: 18px;
+                background-image: url(../assets/img/dl-stat/online.svg);
+                position: absolute;
+                left: -4px;
+            }
+        }
+        &-text {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 21px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            text-transform: lowercase;
+            color: $white;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .dl-header {
+        padding: 22px 85px;
+    }
+}
+@media (max-width: 833px) {
+
 }

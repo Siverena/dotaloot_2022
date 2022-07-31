@@ -1,0 +1,119 @@
+.dl-stat {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: left;
+    text-transform: lowercase;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    padding-left: 64px;
+    width: 210px;
+    margin-left: 25px;
+    &__icon {
+        position: absolute;
+        left: 0px;
+        width: 51px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 51px;
+            height: 40px;
+            background: rgba(255, 0, 0, 0.8);
+            filter: blur(32px);
+        }
+    }
+    &__content {
+        width: 100%;
+        position: relative;
+        height: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__count {
+        padding: 0;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 36px;
+        line-height: 44px;
+        color: $white;
+    }
+    &__name {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        color: $white;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 1440px) {
+    .dl-stat {
+        font-size: 21px;
+        line-height: 25px;
+        width: 117px;
+        height: 39px;
+        padding-left: 36px;
+        margin-left: 30px;
+        &__icon {
+            width: 25px;
+
+            &::after {
+                width: 25px;
+                height: 25px;
+            }
+            img {
+                width: inherit;
+            }
+        }
+        &__count {
+            font-size: 21px;
+            line-height: 25px;
+        }
+        &__name {
+            font-size: 10px;
+            line-height: 12px;
+        }
+    }
+}
+
+@media (max-width: 833px) {
+    .dl-stat {
+        width: 165px;
+        height: 35px;
+        padding-left: 45px;
+        margin-left: 0;
+        &__icon {
+            width: 30px;
+            height: 30px;
+            left: -30px;
+            &::after {
+                width: 30px;
+                height: 30px;
+            }
+            img {
+                width: inherit;
+                height: inherit;
+            }
+        }
+        &__count {
+            font-size: 24px;
+            line-height: 29px;
+        }
+        &__name {
+            font-size: 10px;
+            line-height: 12px;
+        }
+    }
+}

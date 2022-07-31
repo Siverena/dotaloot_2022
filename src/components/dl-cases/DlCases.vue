@@ -6,6 +6,7 @@
         v-for="(caseItem, key) in cases"
         :caseItem="caseItem"
         :key="key"
+        :catId="catId"
       />
     </div>
   </section>

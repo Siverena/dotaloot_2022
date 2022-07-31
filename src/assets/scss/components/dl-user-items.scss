@@ -1,0 +1,15 @@
+.dl-user-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 245px);
+    row-gap: 25px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+@media (max-width: 1440px) {
+}
+@media (max-width: 833px) {
+    .dl-user-items {
+        grid-template-columns: repeat(auto-fill, 168px);
+        row-gap: 13px;
+    }
+}

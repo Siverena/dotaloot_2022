@@ -1,15 +1,15 @@
 <template>
   <section class="dl-personal-info">
     <div class="dl-personal-info__block balance">
-      <img
-        class="balance__img"
-        src="../../assets/img/dl-personal-info/ava.png"
-        alt=""
-      />
+      <img class="balance__img" :src="user.avatar" alt="" />
       <div class="dl-personal-info__block-content balance__content">
         <div class="balance__currencies">
-          <p class="balance__currency balance__currency--rub">250.12</p>
-          <p class="balance__currency balance__currency--mana">250.12</p>
+          <p class="balance__currency balance__currency--rub">
+            {{ user.balance }}
+          </p>
+          <p class="balance__currency balance__currency--mana">
+            {{ user.loot_balance }}
+          </p>
         </div>
         <button class="dl-button--green balance__button">пополнить</button>
       </div>
@@ -57,11 +57,7 @@
         <div class="trade__question">где взять ссылку для обмена?</div>
       </div>
       <div class="trade__row">
-        <input
-          class="trade__link"
-          type="text"
-          value="https//:idsahda.ru/dasda12312"
-        />
+        <input class="trade__link" type="text" :value="user.trade_link" />
         <button class="dl-button--orange trade__button">сохранить</button>
       </div>
     </div>

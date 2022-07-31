@@ -4,13 +4,15 @@
       Пополнить <img src="../../../assets/img/dl-auth/plus.png" alt="" />
     </button>
     <div class="dl-auth-after__currencies">
-      <p class="dl-auth-after__currency dl-auth-after__currency--rub">456,34</p>
+      <p class="dl-auth-after__currency dl-auth-after__currency--rub">
+        {{ user.balance }}
+      </p>
       <p class="dl-auth-after__currency dl-auth-after__currency--mana">
-        456,34
+        {{ user.loot_balance }}
       </p>
     </div>
     <div class="dl-auth-after__ava" v-on:click="openMenu">
-      <img src="../../../assets/img/dl-auth/ava.png" alt="" />
+      <img :src="user.avatar" width="44" height="44" />
     </div>
 
     <div v-if="isMenuSow" class="dl-auth-after__menu" @click="closeMenu">
