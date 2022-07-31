@@ -1,6 +1,6 @@
 export default {
   name: 'DlRaffle',
-  props: ['raffles', 'key'],
+  props: ['raffle', 'key'],
   data() {
     return {
       modeRuffles: '',
@@ -18,7 +18,7 @@ export default {
 
   methods: {
     getMode() {
-      switch (this.raffles.iterationMode) {
+      switch (this.raffle.iterationMode) {
         case 'everyday':
           this.modeRuffles = 'ежедневный ';
           break;
@@ -47,7 +47,7 @@ export default {
     },
     getDeadline() {
       const now = new Date();
-      switch (this.raffles.iterationMode) {
+      switch (this.raffle.iterationMode) {
         case 'everyday':
           this.deadline = this.startOfTomorrow();
           break;

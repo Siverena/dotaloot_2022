@@ -6,7 +6,6 @@ import DlTrust from '@/components/dl-trust/DlTrust.vue';
 import DlQuests from '@/components/dl-quests/DlQuests.vue';
 import DlSlider from '@/components/dl-slider/dLSlider.vue';
 import DlReviews from '@/components/dl-reviews/DlReviews.vue';
-import DlButton from '@/elements/dl-button/DlButton.vue';
 
 export default {
   name: 'CasesPage',
@@ -17,7 +16,6 @@ export default {
     DlEvents,
     DlTrust,
     DlSlider,
-    DlButton,
     DlQuests,
     DlReviews,
   },

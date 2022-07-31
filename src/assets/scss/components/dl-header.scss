@@ -1,7 +1,8 @@
-.dl-header{
-    width: 100%;
-    background-color:$dark-gray;
-    padding: 0px 85px;
-    display: flex;
-    align-items: center;
+.dl-header {
+  width: 100%;
+  background-color: $dark-gray;
+  padding: 0px 85px;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
 }

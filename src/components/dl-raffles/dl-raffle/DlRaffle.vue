@@ -1,23 +1,17 @@
 <template>
-  <div :class="'dl-raffle ' + raffles.iterationMode">
+  <div :class="'dl-raffle ' + raffle.iterationMode">
     <div class="dl-raffle__bottom"></div>
     <div class="dl-raffle__top">
       <div class="dl-raffle__img-wrap">
-        <img
-          :src="raffles.itemLink"
-          alt=""
-          width="131"
-          height="89"
-          class="dl-raffle__img"
-        />
-        <div class="dl-raffle__img-tools">{{ raffles.price }} ₽</div>
+        <img :src="raffle.itemLink" alt="" class="dl-raffle__img" />
+        <div class="dl-raffle__img-tools">{{ raffle.price }} ₽</div>
       </div>
       <div class="dl-raffle__content">
         <div class="dl-raffle__item-name-wrap">
           <div class="dl-raffle__item-name">
-            {{ raffles.itemName }}
+            {{ raffle.itemName }}
           </div>
-          <p class="tooltip">{{ raffles.itemName }}</p>
+          <p class="tooltip">{{ raffle.itemName }}</p>
         </div>
 
         <p class="dl-raffle__info">

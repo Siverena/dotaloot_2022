@@ -1,0 +1,26 @@
+/*******************
+/* Точки в слайдере */
+@mixin dl-agile-dots {
+  justify-content: center;
+  margin: 34px auto 0;
+  padding: 0;
+  width: 100%;
+  background: transparent no-repeat center;
+}
+@mixin dl-agile-dot {
+  margin: 0 4px;
+  & button {
+    // color: white;
+    display: block;
+    width: 8px;
+    height: 7px;
+    padding: 0;
+    background-color: $orange;
+    opacity: 0.3;
+    border: none;
+  }
+  &--current button,
+  &:hover button {
+    opacity: 1;
+  }
+}
