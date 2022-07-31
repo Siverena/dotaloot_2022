@@ -1,11 +1,11 @@
 <template>
   <!--итем-->
-  <div class="dl-drophistory-item">
+  <router-link :to="`/profile/${drop.user_uuid}`" class="dl-drophistory-item">
     <div
       class="dl-drophistory-item__content"
       :style="{
         'border-color': '#' + drop.item_color,
-        'box-shadow': 'inset 0px -22px 15px 4px rgba(211, 44, 230, 0.3)',
+        'box-shadow': 'inset 0px -9px 20px 0px #' + drop.item_color,
         'background-image': `url(${
           drop.item_type === 'money'
             ? drop.item_image
@@ -26,11 +26,11 @@
           <img src="../../../assets/img/dl-lenta/case.png" alt="" />
         </div>
       </div>
-      <router-link :to="'/profile'" class="dl-drophistory-item__user-name">
+      <div class="dl-drophistory-item__user-name">
         {{ drop.user_name }}
-      </router-link>
+      </div>
     </div>
-  </div>
+  </router-link>
   <!--итем-конец -->
 </template>
 <script src="./dl-item.js"></script>

@@ -38,8 +38,18 @@
       </div>
     </div>
     <div class="dl-drophistory">
-      <!-- <DlLoader v-if="loading" /> -->
-      <DlItems :drops="itemType === 'total' ? live_drops : top_drops" />
+      <div v-if="!loading" class="dl-drophistory__items">
+        <DlItem
+          v-if="itemType === 'total'"
+          :drop="exspensive_drop"
+          :class="'dl-drophistory-item--exs'"
+        />
+        <DlItem
+          v-for="drop in itemType === 'total' ? live_drops : top_drops"
+          :key="drop.drop_id"
+          :drop="drop"
+        />
+      </div>
     </div>
   </section>
 </template>

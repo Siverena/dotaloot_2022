@@ -1,15 +1,15 @@
 import { mapActions } from 'vuex';
 export default {
   name: 'DlAuthAfter',
+  props: ['user'],
   data() {
     return {
       isMenuSow: false,
     };
   },
   methods: {
-    openMenu: function (evt) {
+    openMenu: function () {
       this.isMenuSow = !this.isMenuSow;
-      console.log(evt.target);
     },
     closeMenu: function (evt) {
       if (evt.target.classList.contains('dl-auth-after__menu-link')) {

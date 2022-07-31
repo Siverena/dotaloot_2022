@@ -1,4 +1,4 @@
-import DlItems from './dl-items/DlItems.vue';
+import DlItem from './dl-item/DlItem.vue';
 import DlLoader from '@/components/dl-loader/DlLoader.vue';
 import Axios from 'axios';
 export default {
@@ -10,10 +10,11 @@ export default {
       loading: true,
       live_drops: [],
       top_drops: [],
+      expensive_drop: {},
     };
   },
   components: {
-    DlItems,
+    DlItem,
     DlLoader,
   },
   methods: {
@@ -36,8 +37,8 @@ export default {
           } else {
             this.top_drops = response.data.drops;
           }
-
           this.drops = response.data.drops;
+          this.exspensive_drop = response.data.drops[0];
           this.loading = false;
         })
         .catch((error) => {
