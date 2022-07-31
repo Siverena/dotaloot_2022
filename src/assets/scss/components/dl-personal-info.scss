@@ -4,6 +4,7 @@
     justify-content: space-between;
     row-gap: 42px;
     margin-bottom: 56px;
+    margin-top: 52px;
     &__block {
         background: $grey;
         border-radius: 17px;
@@ -216,5 +217,119 @@
         justify-content: center;
         color: #0e0e0e;
         margin-left: 27px;
+    }
+}
+.persona {
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+    &__img {
+        margin-right: 29px;
+        width: 136px;
+        height: 100px;
+        flex-shrink: 0;
+    }
+    &__name {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #ffffff;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 204px;
+        white-space: nowrap;
+        margin-bottom: 12px;
+    }
+    &__cases-count {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: capitalize;
+
+        color: #ffffff;
+        span {
+            color: $orange;
+        }
+    }
+    &__link {
+        margin-top: auto;
+    }
+    &__icon {
+        width: 26px;
+    }
+}
+
+@media (max-width: 1440px) {
+    .dl-personal-info {
+        grid-template-columns: repeat(auto-fill, 240px);
+        &__block {
+            background: $grey;
+            border-radius: 17px;
+            padding: 17px 20px;
+            display: flex;
+            align-items: center;
+            &-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+            }
+            &-header {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 24px;
+                text-transform: uppercase;
+
+                color: $white;
+            }
+            &-text {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+
+                color: $light-gray;
+            }
+        }
+    }
+}
+@media (max-width: 833px) {
+    .dl-personal-info {
+        grid-template-columns: repeat(auto-fill, 370px);
+        &__block {
+            background: $grey;
+            border-radius: 17px;
+            padding: 17px 20px;
+            display: flex;
+            align-items: center;
+            &-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+            }
+            &-header {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 24px;
+                text-transform: uppercase;
+
+                color: $white;
+            }
+            &-text {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+
+                color: $light-gray;
+            }
+        }
     }
 }

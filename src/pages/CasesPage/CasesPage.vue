@@ -1,14 +1,59 @@
 <template>
   <DlSlider />
+  <DlLoader v-if="loading" />
   <div class="container">
     <DlRaffles />
-    <DlCases>Актуальные кейсы</DlCases>
-    <DlCases>Особые кейсы</DlCases>
+    <DlCases v-if="!loading" :cases="casesTmp" :catId="'test'"
+      >Примеры кейсов</DlCases
+    >
+    <DlCases
+      v-if="!loading"
+      :cases="categories[0].cases"
+      :catId="categories[0].id"
+      >{{ categories[0].name }}</DlCases
+    >
+    <DlCases
+      v-if="!loading"
+      :cases="categories[1].cases"
+      :catId="categories[1].id"
+      >{{ categories[1].name }}</DlCases
+    >
     <DlBannerFreeItem />
-    <DlCases>КЕЙСЫ ПО РЕДКОСТИ </DlCases>
+    <DlCases
+      v-if="!loading"
+      :cases="categories[2].cases"
+      :catId="categories[2].id"
+      >{{ categories[2].name }}</DlCases
+    >
+    <DlCases
+      v-if="!loading"
+      :cases="categories[3].cases"
+      :catId="categories[3].id"
+      >{{ categories[3].name }}</DlCases
+    >
     <DlEvents />
-    <DlCases>КЕЙСЫ ЗА МАННУ</DlCases>
-    <DlQuests />
+    <DlCases
+      v-if="!loading"
+      :cases="categories[4].cases"
+      :catId="categories[4].id"
+      >{{ categories[4].name }}</DlCases
+    >
+    <DlCases
+      v-if="!loading"
+      :cases="categories[5].cases"
+      :catId="categories[5].id"
+      >{{ categories[5].name }}</DlCases
+    >
+    <DlCases
+      v-if="!loading"
+      :cases="categories[6].cases"
+      :catId="categories[6].id"
+      >{{ categories[6].name }}</DlCases
+    >
+  </div>
+
+  <DlQuests />
+  <div class="container">
     <DlReviews />
     <DlTrust />
   </div>

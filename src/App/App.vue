@@ -1,6 +1,8 @@
 <template>
   <DlHeader></DlHeader>
+
   <main>
+    <DlLenta />
     <router-view />
   </main>
 

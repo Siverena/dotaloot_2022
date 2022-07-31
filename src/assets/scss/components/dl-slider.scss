@@ -2,6 +2,7 @@
   text-transform: uppercase;
   overflow: hidden;
   height: 607px;
+  order: -1;
   .agile {
     &__nav-button {
       border: none;
@@ -37,16 +38,11 @@
       position: absolute;
       bottom: 26px;
       &::after {
-        content: '';
+        content: "";
         display: block;
         width: 100%;
         position: absolute;
-        background-image: linear-gradient(
-          to right,
-          transparent,
-          $orange,
-          transparent
-        );
+        background-image: linear-gradient(to right, transparent, $orange, transparent);
         height: 2px;
         bottom: -15px;
         left: 0;
@@ -76,13 +72,13 @@
   &--get-gift {
     text-transform: uppercase;
     padding: 127px 474px 170px 887px;
-    background-image: url('@/assets/img/dl-slider/dl-slider1.jpg');
+    background-image: url("@/assets/img/dl-slider/dl-slider1.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     .dl-slide__head {
       color: $white;
-      font-family: 'Inter';
+      font-family: "Inter";
       font-style: normal;
       font-weight: 900;
       font-size: 86px;

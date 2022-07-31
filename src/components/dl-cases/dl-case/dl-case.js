@@ -1,4 +1,4 @@
 export default {
   name: 'DlCase',
-  props: ['caseItem', 'key'],
+  props: ['caseItem', 'key', 'catId'],
 };

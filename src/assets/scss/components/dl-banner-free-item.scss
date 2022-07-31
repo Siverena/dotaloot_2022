@@ -1,7 +1,7 @@
 .dl-banner-free-item {
     width: 100%;
     height: 364px;
-    background-image: url("../assets/img/dl-bunner-free-item/bg.png");
+    background-image: url("../assets/img/dl-banner-free-item/bg.png");
     background-repeat: no-repeat;
     background-position: center;
     padding: 103px 11px 139px 620px;
@@ -59,7 +59,7 @@
     }
 }
 @media (max-width: 1440px) {
-    .dl-bunner-free-item {
+    .dl-banner-free-item {
         height: 258px;
         padding: 68px 15px 69px 375px;
         &__header {
@@ -88,8 +88,8 @@
     }
 }
 @media (max-width: 833px) {
-    .dl-bunner-free-item {
-        background-image: url(../assets/img/dl-bunner-free-item/bg-mobile.png);
+    .dl-banner-free-item {
+        background-image: url(../assets/img/dl-banner-free-item/bg-mobile.png);
         border-radius: 10px;
         height: auto;
         padding: 23px 50px 23px 60px;

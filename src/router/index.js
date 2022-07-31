@@ -10,6 +10,7 @@ import UpgradePage from '../pages/UpgradePage/UpgradePage.vue';
 import PolicyPage from '../pages/PolicyPage/PolicyPage.vue';
 import CookiePage from '../pages/CookiePage/CookiePage.vue';
 import HelpPage from '../pages/HelpPage/HelpPage.vue';
+import ProfilePage from '../pages/ProfilePage/ProfilePage.vue';
 
 const routes = [
   {
@@ -68,10 +69,17 @@ const routes = [
     name: 'help',
     component: HelpPage,
   },
+  {
+    path: '/profile/:id',
+    name: 'profile',
+    props: (route) => ({ id: route.params.id }),
+    component: ProfilePage,
+  },
 ];
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
+  // mode: 'history',
   routes,
   scrollBehavior() {
     return { top: 0 };

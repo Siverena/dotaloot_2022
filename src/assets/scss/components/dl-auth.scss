@@ -37,7 +37,8 @@
         height: 41px;
         display: flex;
         align-items: center;
-
+        background-color: transparent;
+        border: none;
         justify-content: center;
         &--vk {
             background-color: #3bbaee;
@@ -74,6 +75,12 @@
     }
     &__currencies {
         padding: 0 5px;
+        padding: 0 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-grow: 1;
+        min-height: 28px;
     }
     &__currency {
         font-style: normal;
@@ -84,7 +91,8 @@
         align-items: center;
         text-transform: uppercase;
         position: relative;
-        padding: 0 0 0 38px;
+        padding: 0 7px 0 38px;
+        min-width: 64px;
         &--rub {
             color: #94f378;
 

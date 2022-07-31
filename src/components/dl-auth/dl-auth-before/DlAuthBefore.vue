@@ -7,18 +7,18 @@
     />
     вход через:
     <div class="dl-auth-before__buttons">
-      <button
+      <a
         @click="login"
         class="dl-auth-before__button dl-auth-before__button--vk"
       >
         <img src="../../../assets/img/dl-auth/vk.png" alt="" width="29" />
-      </button>
-      <button
+      </a>
+      <a
         @click="login"
         class="dl-auth-before__button dl-auth-before__button--steam"
       >
         <img src="../../../assets/img/dl-auth/steam.png" alt="" width="29" />
-      </button>
+      </a>
     </div>
   </div>
 </template>

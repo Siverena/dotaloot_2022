@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: center;
     align-content: center;
+    cursor: pointer;
     &:hover {
         .dl-quest__img-color {
             display: block;
@@ -24,6 +25,7 @@
             display: none;
         }
     }
+
     &--one {
         width: 646px;
         height: 646px;
@@ -50,6 +52,58 @@
             display: none;
         }
         &-no-color {
+        }
+    }
+}
+@media (max-width: 1440px) {
+    .dl-quest {
+        &--one {
+            width: 372px;
+            height: 372px;
+        }
+        &--two {
+            width: 304px;
+            height: 304px;
+        }
+        &--three {
+            width: 303px;
+            height: 304px;
+        }
+        &__img {
+            &-color {
+                display: none;
+            }
+            &-no-color {
+            }
+        }
+    }
+}
+@media (max-width: 833px) {
+    .dl-quest {
+        position: initial;
+        img {
+            width: 100%;
+        }
+        &--one {
+            width: 100%;
+            height: auto;
+            left: 0;
+            bottom: 0;
+        }
+        &--two {
+            width: 100%;
+            height: auto;
+        }
+        &--three {
+            width: 100%;
+            height: auto;
+        }
+        &__img {
+            &-color {
+                display: none;
+            }
+            &-no-color {
+            }
         }
     }
 }
