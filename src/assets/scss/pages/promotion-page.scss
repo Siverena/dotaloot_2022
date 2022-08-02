@@ -1,0 +1,15 @@
+.dl-promotions-slider {
+  margin-bottom: 57px;
+  .dl-section-h--promotion {
+    margin-bottom: 77px;
+  }
+  .agile {
+    &__dots {
+      @include dl-agile-dots;
+      margin-top: 16px;
+    }
+    &__dot {
+      @include dl-agile-dot;
+    }
+  }
+}
