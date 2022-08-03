@@ -5,7 +5,7 @@
       >Профиль {{ getGamer.name }}</DlSectionHeader
     >
     <DlProfileInfo :gamer="getGamer" />
-    <DlBaseBanner class="dl-banner-replenish-wisely">
+    <DlBaseBanner class="dl-banner-replenish-wisely--personal">
       <template v-slot:header>Пополняй с умом</template>
       <template v-slot:text
         >Получай бесплатные кейсы и
