@@ -17,7 +17,8 @@ export default {
           countLeft: '345',
           contAll: '555',
           tag: 'новое',
-          imgSrc: require('../../assets/img/dl-combinations/combinations/orange.png'),
+          imgSrc: require('@/assets/img/dl-combinations/combinations/orange.png'),
+          imgBg: require('@/assets/img/dl-combinations/combinations/orange_bg.png'),
         },
         {
           name: 'Cold Snap',
@@ -27,7 +28,8 @@ export default {
           countLeft: '85',
           contAll: '5',
           tag: 'выгодное',
-          imgSrc: require('../../assets/img/dl-combinations/combinations/rare.png'),
+          imgSrc: require('@/assets/img/dl-combinations/combinations/rare.png'),
+          imgBg: require('@/assets/img/dl-combinations/combinations/rare_bg.png'),
         },
         {
           name: 'EMP',
@@ -37,7 +39,8 @@ export default {
           countLeft: '25525',
           contAll: '4554544',
           tag: 'приятное',
-          imgSrc: require('../../assets/img/dl-combinations/combinations/legendary.png'),
+          imgSrc: require('@/assets/img/dl-combinations/combinations/legendary.png'),
+          imgBg: require('@/assets/img/dl-combinations/combinations/legendary_bg.png'),
         },
         {
           name: 'Tornado',
@@ -47,7 +50,8 @@ export default {
           countLeft: '25',
           contAll: '54443',
           tag: ' избранным',
-          imgSrc: require('../../assets/img/dl-combinations/combinations/mythical.png'),
+          imgSrc: require('@/assets/img/dl-combinations/combinations/mythical.png'),
+          imgBg: require('@/assets/img/dl-combinations/combinations/mythical_bg.png'),
         },
         {
           name: 'Chaos Meteor',
@@ -57,7 +61,8 @@ export default {
           countLeft: '45824',
           contAll: '515056',
           tag: 'хит',
-          imgSrc: require('../../assets/img/dl-combinations/combinations/season.png'),
+          imgSrc: require('@/assets/img/dl-combinations/combinations/season.png'),
+          imgBg: require('@/assets/img/dl-combinations/combinations/season_bg.png'),
         },
       ],
     };

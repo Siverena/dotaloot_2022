@@ -1,5 +1,10 @@
 <template>
-  <div class="dl-combination">
+  <div
+    class="dl-combination"
+    :style="{
+      'background-image': `url(${combination.imgBg})`,
+    }"
+  >
     <div class="dl-combination__header">
       <img :src="combination.imgSrc" alt="" class="dl-combination__img" />
       <span class="dl-combination__name">{{ combination.name }}</span>
@@ -14,8 +19,8 @@
         {{ combination.profit }} ₽
       </div>
       <p class="dl-combination__count">
-        осталось {{ combination.countLeft
-        }}<span :class="'dl-combination__span--' + combination.color"
+        осталось {{ combination.countLeft }}&nbsp;<span
+          :class="'dl-combination__span--' + combination.color"
           >/{{ combination.contAll }}</span
         >
       </p>

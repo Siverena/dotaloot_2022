@@ -107,6 +107,9 @@
         }
         &__switch {
             margin: 0 auto;
+            &--contract {
+                margin: 0 0 0 auto;
+            }
         }
         &__switch-item {
         }
@@ -114,6 +117,7 @@
 }
 @media (max-width: 833px) {
     .dl-filters {
+        margin-bottom: 38px;
         &__list {
             justify-content: space-between;
             width: 100%;
@@ -131,6 +135,9 @@
             }
         }
         &__switch {
+            &--contract {
+                margin: 0 auto;
+            }
         }
         &__switch-item {
         }

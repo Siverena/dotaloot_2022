@@ -1,21 +1,21 @@
 /**********
 /* NORMALIZE */
-@import './normalize.scss';
+@import "./normalize.scss";
 
 /**********
 /* MIXINS */
-@import './mixins.scss';
+@import "./mixins.scss";
 
 /**********
 
 /* BASE */
-@import 'base/base';
+@import "base/base";
 
 /**********
 /* ELEMENTS */
-@import './elements/_dl-logo.scss';
-@import './elements/_dl-button.scss';
-@import './elements/_dl-section-header.scss';
+@import "./elements/_dl-logo.scss";
+@import "./elements/_dl-button.scss";
+@import "./elements/_dl-section-header.scss";
 
 /**********
 /* COMPONENTS */
@@ -46,7 +46,8 @@
 @import "./components/dl-filter.scss";
 @import "./components/dl-user-items.scss";
 @import "./components/dl-case-item.scss";
+@import "./components/dl-contracts.scss";
 
 /**********
 /* FONTS */
-@import './fonts.scss';
+@import "./fonts.scss";
