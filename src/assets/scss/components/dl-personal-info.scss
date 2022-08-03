@@ -176,8 +176,20 @@
     align-content: space-between;
     justify-content: space-between;
     align-items: stretch;
+
+    &__header {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        text-transform: uppercase;
+
+        color: #ffffff;
+    }
     &__row {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     &__link {
         background: #0e0e0e;
@@ -202,6 +214,18 @@
             outline: none;
         }
     }
+    &__question {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        text-align: center;
+
+        color: #ffffff;
+        span {
+            color: $orange;
+        }
+    }
     &__button {
         border-radius: 10px;
         width: 158px;
@@ -216,7 +240,6 @@
         text-transform: uppercase;
         justify-content: center;
         color: #0e0e0e;
-        margin-left: 27px;
     }
 }
 .persona {
@@ -265,41 +288,6 @@
 
 @media (max-width: 1440px) {
     .dl-personal-info {
-        grid-template-columns: repeat(auto-fill, 240px);
-        &__block {
-            background: $grey;
-            border-radius: 17px;
-            padding: 17px 20px;
-            display: flex;
-            align-items: center;
-            &-content {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                height: 100%;
-            }
-            &-header {
-                font-style: normal;
-                font-weight: 700;
-                font-size: 20px;
-                line-height: 24px;
-                text-transform: uppercase;
-
-                color: $white;
-            }
-            &-text {
-                font-style: normal;
-                font-weight: 400;
-                font-size: 14px;
-                line-height: 17px;
-
-                color: $light-gray;
-            }
-        }
-    }
-}
-@media (max-width: 833px) {
-    .dl-personal-info {
         grid-template-columns: repeat(auto-fill, 370px);
         &__block {
             background: $grey;
@@ -331,5 +319,82 @@
                 color: $light-gray;
             }
         }
+    }
+    .trade {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        align-items: stretch;
+        &__link {
+            margin-top: 20px;
+        }
+    }
+    .persona {
+        &__name {
+            max-width: 168px;
+        }
+    }
+}
+@media (max-width: 833px) {
+    .dl-personal-info {
+        grid-template-columns: repeat(auto-fill, 370px);
+        &__block {
+            background: $grey;
+            border-radius: 17px;
+            padding: 17px 20px;
+            display: flex;
+            align-items: stretch;
+            &-content {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 100%;
+            }
+            &-header {
+                font-style: normal;
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 24px;
+                text-transform: uppercase;
+
+                color: $white;
+            }
+            &-text {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+
+                color: $light-gray;
+            }
+        }
+    }
+    .trade {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        &__row {
+            &--header {
+                flex-direction: column;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                height: 35px;
+            }
+        }
+        &__header {
+            font-size: 12px;
+            line-height: 19px;
+            margin-right: auto;
+        }
+        &__question {
+            font-size: 11px;
+            line-height: 13px;
+            margin-right: auto;
+        }
+        &__button {
+            height: 100%;
+            width: 105px;
+            margin-left: auto;
+        }
+    }
+    .persona {
     }
 }

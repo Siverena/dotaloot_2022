@@ -1,5 +1,6 @@
-.dl-combinations{
-    &__warning{
+.dl-combinations {
+    position: relative;
+    &__warning {
         font-style: normal;
         font-weight: 700;
         font-size: 14px;
@@ -9,8 +10,11 @@
         text-transform: capitalize;
         color: $white;
         margin-bottom: 10px;
+        position: relative;
+        top: -58px;
+        width: 351px;
     }
-    &__wrap{
+    &__wrap {
         width: 100%;
         display: grid;
         grid-template-columns: repeat(auto-fill, 241px);
@@ -19,44 +23,45 @@
         margin: 0 auto;
     }
 }
-.dl-combination{
-    background: #292929;
+.dl-combination {
     border-radius: 10px;
     width: 241px;
-    padding: 14px;
+    padding: 13px 14px;
     color: $white;
-    &__header{
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    &__header {
         display: flex;
         align-items: center;
-        margin-bottom: 26px;
+        margin-bottom: 39px;
     }
-    &__img{
+    &__img {
         border-radius: 10px;
         margin-right: 10px;
     }
-    &__name{
-        font-style: normal;
-        font-weight: 700;
+    &__name {
         font-size: 18px;
         line-height: 22px;
+        font-style: normal;
+        font-weight: 700;
         text-transform: capitalize;
     }
-    &__content{
-        // padding: 0 31px;
+    &__content {
+        // padding: 0 30px;
     }
-    &__price{
+    &__price {
         font-style: normal;
         font-weight: 700;
         font-size: 26px;
         line-height: 31px;
         text-transform: lowercase;
         width: 154px;
-        margin: 0 auto 17px;
+        margin: 0 auto 30px;
     }
-    &__profit{
+    &__profit {
         border-radius: 10px;
         display: flex;
-        width: 100%;
         height: 51px;
         align-items: center;
         justify-content: center;
@@ -68,24 +73,25 @@
         line-height: 22px;
         text-transform: capitalize;
         width: 154px;
-        margin: 0 auto 12px;
-        &--orange{
-            background-color: $orange;
-        }
-        &--rare{
-            background-color: $rare;
-        }
-        &--legendary{
-            background-color: $legendary;
-        }
-        &--mythical{
-            background-color: $mythical;
-        }
-        &--season {
-            background-color: $season ;
-        }
+        margin: 0 auto 33px;
+        background-color: #ff77e1;
+        // &--orange {
+        //     background-color: $orange;
+        // }
+        // &--rare {
+        //     background-color: $rare;
+        // }
+        // &--legendary {
+        //     background-color: $legendary;
+        // }
+        // &--mythical {
+        //     background-color: $mythical;
+        // }
+        // &--season {
+        //     background-color: $season;
+        // }
     }
-    &__count{
+    &__count {
         font-style: normal;
         font-weight: 700;
         font-size: 14px;
@@ -94,61 +100,153 @@
         align-items: center;
         text-transform: lowercase;
         width: 154px;
-        margin: 0 auto 15px;
-       justify-content: center;
-       white-space: nowrap;
-
+        margin: 0 auto 34px;
+        justify-content: center;
+        white-space: nowrap;
     }
-    &__span{
-        &--orange{
+    &__span {
+        &--orange {
             color: $orange;
         }
-        &--rare{
+        &--rare {
             color: $rare;
         }
-        &--legendary{
+        &--legendary {
             color: $legendary;
         }
-        &--mythical{
+        &--mythical {
             color: $mythical;
         }
         &--season {
-            color: $season ;
+            color: $season;
         }
     }
-    &__tag{
-        
+    &__tag {
         border-radius: 9px;
         padding: 11px 17px;
         font-style: normal;
         font-weight: 700;
         font-size: 21px;
         line-height: 21px;
-        text-transform: uppercase;       
+        text-transform: uppercase;
         font-weight: 700;
         font-size: 21px;
         line-height: 21px;
         text-transform: uppercase;
         text-align: center;
-        &--orange{
+        &--orange {
             background: rgba(255, 139, 0, 0.1);
             color: $orange;
         }
-        &--rare{
+        &--rare {
             background: rgba(75, 105, 255, 0.12);
             color: $rare;
         }
-        &--legendary{
+        &--legendary {
             background: rgba(211, 44, 230, 0.1);
             color: $legendary;
         }
-        &--mythical{
+        &--mythical {
             background: rgba(136, 71, 255, 0.1);
             color: $mythical;
         }
         &--season {
             background: rgba(255, 214, 67, 0.1);
-            color: $season ;
+            color: $season;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .dl-combinations {
+        &__warning {
+            position: unset;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        &__wrap {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .dl-combination {
+        margin: 0 9px 22px 9px;
+        &:first-child {
+            margin-left: 0;
+        }
+        &:nth-child(3n) {
+            margin-right: 0;
+        }
+        &:nth-child(4n) {
+            margin-left: auto;
+        }
+        &:last-child {
+            margin-right: auto;
+        }
+    }
+}
+@media (max-width: 833px) {
+    .dl-combinations {
+        &__warning {
+            position: unset;
+            margin: 0 auto;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        &__wrap {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 163px);
+            justify-content: space-between;
+            row-gap: 30px;
+        }
+    }
+
+    .dl-combination {
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+        width: 163px;
+        padding: 10px 14px;
+        &__header {
+            margin-bottom: 17px;
+        }
+        &__img {
+            width: 29px;
+            height: 29px;
+            border-radius: 10px;
+            margin-right: 6px;
+        }
+        &__name {
+            font-size: 16px;
+            line-height: 19px;
+        }
+
+        &__price {
+            width: auto;
+            margin: 0 auto 23px;
+        }
+        &__profit {
+            font-size: 14px;
+            line-height: 17px;
+            height: 41px;
+            width: 115px;
+            margin: 0 auto 14px;
+        }
+        &__count {
+            width: auto;
+            white-space: normal;
+            display: block;
+            text-align: center;
+            margin: 0 auto 16px;
+        }
+
+        &__tag {
+            font-size: 14px;
+            line-height: 17px;
+            padding: 6px 13px;
+            width: fit-content;
+            margin: 0 auto;
         }
     }
 }

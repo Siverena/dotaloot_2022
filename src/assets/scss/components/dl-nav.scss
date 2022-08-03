@@ -81,12 +81,13 @@
 }
 @media (max-width: 833px) {
   .dl-nav {
+    justify-content: space-between;
     &--header-tablet {
       display: none;
     }
     &__open {
       padding: 12px 25px;
-      margin-left: auto;
+      margin-left: 0;
       display: block;
       background-color: transparent;
       border: none;

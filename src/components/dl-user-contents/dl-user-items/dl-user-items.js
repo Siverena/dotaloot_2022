@@ -1,7 +1,7 @@
 import DlCaseItem from '@/components/dl-case-item/DlCaseItem.vue';
 export default {
   name: 'DlUserItems',
-  props: ['items'],
+  props: ['items', 'page', 'handleClick'],
   components: {
     DlCaseItem,
   },

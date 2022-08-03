@@ -50,15 +50,17 @@
       </div>
     </div>
     <div class="dl-personal-info__block trade">
-      <div class="trade__row">
+      <div class="trade__row trade__row--header">
         <p class="dl-personal-info__block-header trade__header">
-          Ваша ссылка на обмен
+          Ваша trade-ссылка
         </p>
-        <div class="trade__question">где взять ссылку для обмена?</div>
+        <div class="trade__question">
+          Найти ссылку можно <span>на сайте Steam</span>
+        </div>
+        <button class="dl-button--orange trade__button">сохранить</button>
       </div>
       <div class="trade__row">
         <input class="trade__link" type="text" :value="user.trade_link" />
-        <button class="dl-button--orange trade__button">сохранить</button>
       </div>
     </div>
   </section>
