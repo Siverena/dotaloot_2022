@@ -5,35 +5,8 @@
     justify-content: space-between;
   }
   .agile {
-    &__nav-button {
-      border: none;
-      color: #fff;
-      cursor: pointer;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      transition-duration: 0.3s;
-      width: 80px;
-      background: transparent no-repeat center;
-      background-size: 30px;
-      font-size: 0;
-      opacity: 0;
-      &:hover {
-        opacity: 0.5;
-      }
-      &--prev {
-        left: 0;
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-      }
-      &--next {
-        right: 0;
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-      }
-    }
     &__dots {
       @include dl-agile-dots;
-      margin: 34px auto 0;
-      bottom: 26px;
     }
     &__dot {
       @include dl-agile-dot;
@@ -63,12 +36,16 @@
       flex-grow: 1;
     }
     &-name {
+      width: 297px;
       font-style: normal;
       font-weight: 700;
       font-size: 22px;
       line-height: 27px;
       text-transform: uppercase;
       color: $white;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
     }
   }
 
@@ -133,8 +110,6 @@
       position: absolute;
       top: 7px;
       left: 8px;
-      width: 62px;
-      height: 24px;
       font-style: normal;
       font-weight: 700;
       font-size: 11px;
@@ -143,10 +118,117 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 0;
+      padding: 4px;
       color: $white;
       background-color: rgba(0, 0, 0, 0.75);
       border-radius: 6px;
+    }
+  }
+}
+
+/********************************/
+/**********Адаптив планшет*******/
+@media (max-width: 1440px) {
+  .dl-reviews {
+    .agile {
+      &__dots {
+        @include dl-agile-dots;
+        margin-top: 39px;
+      }
+    }
+  }
+  .dl-review {
+    width: 363px;
+    height: 265px;
+    padding: 30px 22px 17px;
+    &__author {
+      &-name {
+        width: 258px;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+    &__avatar {
+      width: 48px;
+      height: 48px;
+      margin-right: 13px;
+    }
+    &__date {
+      font-size: 15px;
+      line-height: 18px;
+    }
+    &__text {
+      width: 172px;
+      margin-top: 12px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+    &__case {
+      width: 164px;
+      bottom: 23px;
+      right: 23px;
+    }
+
+    &__item {
+      width: 106px;
+      height: 70px;
+      border-radius: 10px;
+      & img {
+        width: 100%;
+        border-radius: 8px;
+      }
+      &-price {
+        top: 5px;
+        left: 6px;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+  }
+}
+
+/********************************/
+/**********Адаптив мобилка*******/
+@media (max-width: 833px) {
+  .dl-reviews {
+    .agile {
+      &__dots {
+        @include dl-agile-dots;
+        margin-top: 33px;
+      }
+    }
+  }
+  .dl-review {
+    width: 100%;
+    height: 255px;
+    padding-top: 29px;
+    &__author {
+      &-name {
+        width: 265px;
+        font-size: 19px;
+        line-height: 23px;
+      }
+    }
+    &__avatar {
+      width: 48px;
+      height: 48px;
+      margin-right: 13px;
+    }
+    &__date {
+      font-size: 13px;
+      line-height: 16px;
+    }
+    &__text {
+      width: 165px;
+    }
+    &__case {
+      width: 158px;
+    }
+
+    &__item {
+      width: 102px;
+      height: 67px;
     }
   }
 }

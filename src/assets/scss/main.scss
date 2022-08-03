@@ -19,6 +19,7 @@
 
 /**********
 /* COMPONENTS */
+
 @import "./components/dl-header.scss";
 @import "./components/dl-nav.scss";
 @import "./components/dl-raffles.scss";
@@ -47,6 +48,11 @@
 @import "./components/dl-user-items.scss";
 @import "./components/dl-case-item.scss";
 @import "./components/dl-contracts.scss";
+@import './components/dl-banners.scss';
+
+/* PAGES */
+@import './pages/promotion-page.scss';
+
 
 /**********
 /* FONTS */
