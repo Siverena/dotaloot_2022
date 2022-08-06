@@ -42,7 +42,7 @@
             fill="white"
           />
         </svg>
-        Контракты (234)
+        Контракты ({{ gamer.contracts ? gamer.contracts.length : '' }})
       </li>
       <li class="dl-filters__item dl-filters__item--disabled">
         <svg
@@ -88,10 +88,13 @@
             fill="white"
           />
         </svg>
-        Подарки (234)
+        Подарки (5)
       </li>
     </ul>
-    <div v-if="visible === true" class="dl-filters__switch">
+    <div
+      v-if="visible === true && filterType === 'box'"
+      class="dl-filters__switch"
+    >
       <div
         class="dl-filters__switch-item"
         @click="changeActive(false)"

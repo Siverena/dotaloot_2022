@@ -55,7 +55,9 @@
         </svg>
         Апгрейды</router-link
       >
-      <router-link to="/promotion" class="dl-nav__item dl-nav__item--menu"
+      <router-link
+        to="/promotion"
+        class="dl-nav__item dl-nav__item--promotion dl-nav__item--menu"
         ><svg
           width="80"
           height="80"
