@@ -4,6 +4,8 @@
 
     display: flex;
     align-items: center;
+    padding-left: 85px;
+    padding-right: 78px;
 
     &__online {
         text-align: center;
@@ -41,6 +43,23 @@
             color: $white;
         }
     }
+    &__sound {
+        width: 30px;
+        height: 30px;
+        color: $grey;
+        margin-left: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 4px;
+        &:hover {
+            background: linear-gradient(216.36deg, rgba(255, 139, 0, 0.36) 21.2%, rgba(87, 76, 64, 0.47) 88.03%);
+        }
+        &:active {
+            background-color: $orange;
+        }
+    }
 }
 
 @media (max-width: 1440px) {
@@ -49,5 +68,4 @@
     }
 }
 @media (max-width: 833px) {
-
 }

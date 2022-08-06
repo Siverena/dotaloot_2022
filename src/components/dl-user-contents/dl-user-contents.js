@@ -1,10 +1,12 @@
 import DlUserItems from './dl-user-items/DlUserItems.vue';
 import DlFilter from '@/components/dl-filter/DlFilter.vue';
+import DlUserContracts from './dl-user-contracts/DlUserContracts.vue';
 export default {
   name: 'DlUserContents',
-  props: ['gamer', 'visible'],
+  props: ['gamer', 'visible', 'page'],
   data() {
     return {
+      // filterType 'box', 'contract', 'gift', 'upgrade'
       filterType: 'box',
       isActive: true,
     };
@@ -12,6 +14,7 @@ export default {
   components: {
     DlFilter,
     DlUserItems,
+    DlUserContracts,
   },
   computed: {
     filteredDrops() {

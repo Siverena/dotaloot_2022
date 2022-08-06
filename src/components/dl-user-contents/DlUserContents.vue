@@ -7,6 +7,15 @@
     :isActive="isActive"
     :filterType="filterType"
   />
-  <DlUserItems :items="visible ? filteredDrops : gamer.drops" />
+  <DlUserItems
+    v-if="filterType === 'box'"
+    :items="visible ? filteredDrops : gamer.drops"
+    :gift="gamer.gift"
+    :page="page"
+  />
+  <DlUserContracts
+    v-if="filterType === 'contract'"
+    :contracts="gamer.contracts"
+  />
 </template>
 <script src="./dl-user-contents.js"></script>

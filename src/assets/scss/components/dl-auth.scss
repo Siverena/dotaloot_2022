@@ -40,6 +40,7 @@
         background-color: transparent;
         border: none;
         justify-content: center;
+        cursor: pointer;
         &--vk {
             background-color: #3bbaee;
             margin-right: 4px;
@@ -129,13 +130,28 @@
         justify-content: center;
         cursor: pointer;
     }
+    &__open-menu {
+        background: #232226;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: -10px;
+        cursor: pointer;
+        &:hover {
+            background: linear-gradient(216.36deg, rgba(255, 139, 0, 0.36) 21.2%, rgba(87, 76, 64, 0.47) 88.03%);
+        }
+    }
     &__menu {
         background: $dark-gray;
         border-radius: 10px;
         position: absolute;
         z-index: 10;
-        right: 0;
-        bottom: -83px;
+        right: -12px;
+        bottom: -37px;
     }
     &__menu-link {
         cursor: pointer;
@@ -151,6 +167,18 @@
         text-decoration: none;
         svg {
             margin-right: 12px;
+        }
+    }
+}
+@media (max-width: 1440px) {
+}
+@media (max-width: 833px) {
+    .dl-auth-after {
+        &__pay {
+            padding: 7px 7px;
+            span {
+                display: none;
+            }
         }
     }
 }

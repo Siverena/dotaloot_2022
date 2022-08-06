@@ -2,8 +2,9 @@
     min-height: 594px;
     background-image: url(@/assets/img/dl-quests/bg.png);
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: bottom 200px center;
     margin-bottom: 37px;
+    background-size: 1146px auto;
     &__wrap {
         // background-size: 100% auto;
         position: relative;
@@ -25,16 +26,18 @@
             display: none;
         }
     }
-
+    img {
+        width: 100%;
+    }
     &--one {
-        width: 646px;
-        height: 646px;
+        width: 600px;
+        height: 546px;
         left: 0;
-        bottom: 0;
+        bottom: 52px;
     }
     &--two {
-        width: 528px;
-        height: 528px;
+        width: 400px;
+        height: 551px;
         left: 0;
         right: 0;
         bottom: 0;
@@ -42,8 +45,8 @@
         z-index: 6;
     }
     &--three {
-        width: 528px;
-        height: 528px;
+        width: 400px;
+        height: 556px;
         right: 0;
         bottom: 10px;
     }
@@ -58,16 +61,17 @@
 @media (max-width: 1440px) {
     .dl-quest {
         &--one {
-            width: 372px;
-            height: 372px;
+            width: 355px;
+            height: 323px;
+            bottom: 28px;
         }
         &--two {
-            width: 304px;
-            height: 304px;
+            width: 244px;
+            height: 336px;
         }
         &--three {
-            width: 303px;
-            height: 304px;
+            width: 223px;
+            height: 310px;
         }
         &__img {
             &-color {
@@ -85,18 +89,18 @@
             width: 100%;
         }
         &--one {
-            width: 100%;
-            height: auto;
+            // width: 355px;
+            // height: 323px;
             left: 0;
             bottom: 0;
         }
         &--two {
-            width: 100%;
-            height: auto;
+            // width: 100%;
+            // height: auto;
         }
         &--three {
-            width: 100%;
-            height: auto;
+            // width: 100%;
+            // height: auto;
         }
         &__img {
             &-color {

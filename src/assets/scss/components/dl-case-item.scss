@@ -21,11 +21,8 @@
         font-weight: 900;
         font-size: 14px;
         line-height: 17px;
-        /* identical to box height */
-
         display: flex;
         align-items: center;
-
         color: #ffffff;
         padding: 5px 16px;
         justify-content: center;
@@ -46,7 +43,22 @@
         overflow: hidden;
         text-align: center;
     }
-    &__add-contract {
+    &__status-wrap {
+        display: flex;
+    }
+    &__status {
+        background: rgba(23, 22, 27, 0.7);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+        svg {
+            max-width: 17px;
+            max-height: 17px;
+        }
     }
     &--contract {
         &::after {
@@ -71,6 +83,95 @@
                 display: block;
                 transition: display 10s ease;
             }
+        }
+    }
+    &__gift-content {
+        display: none;
+    }
+    &--gift {
+        border-radius: 10px;
+        border: 3px solid #ff8b00;
+        position: relative;
+        box-shadow: 1px -3px 33px 0px $orange;
+        :after {
+            content: "";
+            width: 106px;
+            height: 114px;
+            background-image: url(../assets/img/dl-case-item/gift.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            top: -53px;
+            right: -28px;
+        }
+        .dl-case-item__base {
+            box-shadow: none !important ;
+        }
+        .dl-case-item__name {
+            display: none;
+        }
+        .dl-case-item__info {
+            display: none;
+        }
+        .dl-case-item__gift-content {
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+            height: 100%;
+            background-size: 100% 100%;
+            background-color: #17161b91;
+        }
+        .dl-case-item__take {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            text-transform: uppercase;
+            color: #17161b;
+
+            border-radius: 6px;
+            font-style: normal;
+            font-weight: 900;
+
+            padding: 7px 5px;
+            background: #ff8b00;
+            cursor: pointer;
+            justify-content: center;
+        }
+        .dl-case-item__gift-info {
+            display: flex;
+            padding: 4px;
+            justify-content: space-between;
+        }
+
+        .dl-case-item__gift-coast {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 6px;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 17px;
+            display: flex;
+            align-items: center;
+            color: #ffffff;
+            padding: 5px 16px;
+            justify-content: center;
+            margin-bottom: auto;
+        }
+        .dl-case-item__gift-text {
+            margin-top: auto;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 17px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 5px 3px;
+            color: #ffffff;
         }
     }
 }
