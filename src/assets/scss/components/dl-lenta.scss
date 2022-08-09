@@ -56,6 +56,11 @@
     height: 80px;
     width: 112px;
     margin-right: 1px;
+    &:hover {
+        .dl-drophistory-item__hover {
+            display: flex !important;
+        }
+    }
     &__content {
         border-width: 1px 1px 5px 1px;
         border-style: solid;
@@ -67,56 +72,70 @@
         background-position: center;
         background-repeat: no-repeat;
         // display: none;
-        &:hover {
-            .dl-drophistory-item__hover {
-                // display: block;
-            }
-        }
     }
     &__hover {
         position: absolute;
-        padding: 9px 9px 0 9px;
+        height: 100%;
+        width: 100%;
+        top: 0;
         display: none;
+        background-color: #232226;
+        padding: 3px 6px;
     }
-    &__images {
+    &__user-info {
         display: flex;
+        margin-top: auto;
+        z-index: 5;
+    }
+    &__img-case {
+        position: absolute;
+        top: -7px;
+        right: -1px;
+        width: 106px;
+        img {
+            width: 100%;
+        }
     }
     &__img-wrap {
-        width: 57px;
-        height: 45px;
+        width: 25px;
+        height: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
         margin-bottom: 4px;
+        border-radius: 3px;
+        img {
+            width: 100%;
+            border-radius: 3px;
+            margin-right: 5px;
+        }
     }
     &__user-name {
         font-style: normal;
         font-weight: 700;
-        font-size: 14px;
-        line-height: 16px;
-        display: flex;
-        align-items: center;
+        font-size: 12px;
+        line-height: 24px;
         text-transform: capitalize;
         color: #ffffff;
         text-overflow: ellipsis;
         white-space: nowrap;
         overflow: hidden;
         text-decoration: none;
+        width: 77px;
     }
     &--exs {
         border: 3px solid;
-        // border-color: #ff8b00;
-
-        border-image-source: linear-gradient(
-            90deg,
-            rgba(255, 212, 0, 0) 0%,
-            #ff8b00 21.87%,
-            #ffe600 35.94%,
-            #ff8b00 68.75%,
-            rgba(255, 221, 0, 0.61875) 82.29%,
-            rgba(255, 207, 0, 0) 100%
-        );
+        border-image: linear-gradient(
+                90deg,
+                #ffa83f 0%,
+                #ffef5b 35.94%,
+                #ffbf48 58.33%,
+                #f39019 66.15%,
+                #ffe04c 91.67%,
+                #f5eb5a 100%
+            )
+            30;
 
         .dl-drophistory-item__content {
             box-shadow: inset 1px -10px 15px rgba(255, 214, 67, 0.3), inset -1px 10px 15px rgba(255, 214, 67, 0.3) !important;

@@ -14,6 +14,7 @@
       <div
         class="dl-combination__profit"
         :class="'dl-combination__profit--' + combination.color"
+        :style="{ 'background-color': `$${combination.color}` }"
       >
         выгода <br />
         {{ combination.profit }} ₽

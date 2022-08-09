@@ -34,7 +34,7 @@
     >
     <DlSocials />
     <DlAuth />
-    <div class="dl-header__sound">
+    <div class="dl-header__sound dl-button--grey-orange">
       <svg
         width="18"
         height="18"
