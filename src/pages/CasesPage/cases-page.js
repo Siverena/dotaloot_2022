@@ -1,12 +1,12 @@
 import DlRaffles from '@/components/dl-raffles/DlRaffles.vue';
 import DlCases from '@/components/dl-cases/DlCases.vue';
-import DlBannerFreeItem from '@/components/dl-banner-free-item/DlBannerFreeItem.vue';
 import DlEvents from '@/components/dl-events/DlEvents.vue';
 import DlTrust from '@/components/dl-trust/DlTrust.vue';
 import DlQuests from '@/components/dl-quests/DlQuests.vue';
 import DlSlider from '@/components/dl-slider/dLSlider.vue';
 import DlReviews from '@/components/dl-reviews/DlReviews.vue';
 import DlLoader from '@/components/dl-loader/DlLoader.vue';
+import DlBaseBanner from '@/components/dl-base-banner/DlBaseBanner.vue';
 import Axios from 'axios';
 
 export default {
@@ -14,13 +14,13 @@ export default {
   components: {
     DlRaffles,
     DlCases,
-    DlBannerFreeItem,
     DlEvents,
     DlTrust,
     DlSlider,
     DlQuests,
     DlReviews,
     DlLoader,
+    DlBaseBanner,
   },
   data() {
     return {

@@ -36,7 +36,10 @@
         </svg>
         Контракты</router-link
       >
-      <router-link to="/upgrade" class="dl-nav__item"
+      <router-link
+        to="/upgrade"
+        class="dl-nav__item dl-nav__item--disabled"
+        @click="event.prevent.default()"
         ><svg
           width="80"
           height="63"

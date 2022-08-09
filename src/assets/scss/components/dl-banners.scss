@@ -75,13 +75,13 @@
 /*************************/
 /*Баннер пополняй с умом*/
 .dl-banner-replenish-wisely {
-  background-image: url('@/assets/img/dl-banner-replenish-wisely/bg.png');
+  background-image: url("@/assets/img/dl-banner-replenish-wisely/bg.png");
 }
 
 /*************************/
 /*Баннер Тише, тут промокод*/
 .dl-banner-promocode {
-  background-image: url('@/assets/img/dl-banner-promocode/bg.png');
+  background-image: url("@/assets/img/dl-banner-promocode/bg.png");
   &__socials-wrap {
     display: flex;
     justify-content: flex-start;
@@ -100,7 +100,39 @@
 /*************************/
 /*Баннер МАНЫ МНОГО НЕ БЫВАЕТ*/
 .dl-banner-never-too-much-mana {
-  background-image: url('@/assets/img/dl-banner-never-too-much-mana/bg.png');
+  background-image: url("@/assets/img/dl-banner-never-too-much-mana/bg.png");
+}
+
+/*************************/
+/*Баннер ПОДПИШИСЬ*/
+.dl-banner-free-item {
+  background-image: url("../assets/img/dl-banner-free-item/bg.png");
+  &__button {
+    background: $blue;
+    box-shadow: 0px 0px 19px rgba(255, 255, 255, 0.36);
+    border-radius: 14px;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 247px;
+    height: 50px;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 17px;
+    line-height: 21px;
+    padding: 4px 0 4px 58px;
+    position: relative;
+    flex-shrink: 0;
+    border: none;
+
+    img {
+      position: absolute;
+      width: 29px;
+      height: 26px;
+      left: 30px;
+    }
+  }
 }
 
 /*******************/
@@ -131,10 +163,10 @@
   }
   .dl-banner-replenish-wisely,
   .dl-banner-replenish-wisely--personal {
-    background-image: url('@/assets/img/dl-banner-replenish-wisely/bg_tablet.png');
+    background-image: url("@/assets/img/dl-banner-replenish-wisely/bg_tablet.png");
   }
   .dl-banner-promocode {
-    background-image: url('@/assets/img/dl-banner-replenish-wisely/bg_tablet.png');
+    background-image: url("@/assets/img/dl-banner-replenish-wisely/bg_tablet.png");
     &__social {
       margin-right: 10px;
       img {
@@ -143,7 +175,20 @@
     }
   }
   .dl-banner-never-too-much-mana {
-    background-image: url('@/assets/img/dl-banner-replenish-wisely/bg_tablet.png');
+    background-image: url("@/assets/img/dl-banner-replenish-wisely/bg_tablet.png");
+  }
+  .dl-banner-free-item {
+    &__button {
+      width: 220px;
+      height: 38px;
+      font-size: 14px;
+      line-height: 17px;
+      padding-left: 16px;
+      img {
+        width: 21px;
+        height: 18px;
+      }
+    }
   }
 }
 
@@ -157,7 +202,7 @@
     height: 257px;
     &::before,
     &::after {
-      content: '';
+      content: "";
       display: block;
       width: 10px;
     }
@@ -179,22 +224,39 @@
   }
   .dl-banner-replenish-wisely {
     background-color: #1c2733;
-    background-image: url('@/assets/img/dl-banner-replenish-wisely/bg_mobile.png');
+    background-image: url("@/assets/img/dl-banner-replenish-wisely/bg_mobile.png");
     background-position: right -70px bottom -33px;
   }
   .dl-banner-replenish-wisely--personal {
     background-color: rgba(77, 44, 44, 0.3);
-    background-image: url('@/assets/img/dl-banner-replenish-wisely/bg_mobile.png');
+    background-image: url("@/assets/img/dl-banner-replenish-wisely/bg_mobile.png");
     background-position: right -70px bottom -33px;
   }
   .dl-banner-promocode {
     background-color: #1c2733;
-    background-image: url('@/assets/img/dl-banner-replenish-wisely/bg_mobile.png');
+    background-image: url("@/assets/img/dl-banner-replenish-wisely/bg_mobile.png");
     background-position: right -70px bottom -33px;
   }
   .dl-banner-never-too-much-mana {
     background-color: #1c2733;
-    background-image: url('@/assets/img/dl-banner-replenish-wisely/bg_mobile.png');
+    background-image: url("@/assets/img/dl-banner-replenish-wisely/bg_mobile.png");
     background-position: right -70px bottom -33px;
+  }
+  .dl-banner-free-item {
+    background-image: url(../assets/img/dl-banner-free-item/bg-mobile.png);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 20px;
+    &__button {
+      width: 220px;
+      height: 38px;
+      font-size: 14px;
+      line-height: 17px;
+      padding-left: 16px;
+      img {
+        width: 21px;
+        height: 18px;
+      }
+    }
   }
 }

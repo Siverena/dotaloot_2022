@@ -112,13 +112,14 @@
             color: #3bc1ee;
             &::before {
                 content: "";
-                background-image: url(../assets/img/dl-auth/mana.png);
+                background-image: url(../assets/img/base/mana.svg);
                 background-repeat: no-repeat;
                 background-position: center;
-                width: 47px;
-                height: 55px;
+                background-size: 27px;
+                width: 27px;
+                height: 27px;
                 position: absolute;
-                left: 0;
+                left: 10px;
             }
         }
     }
@@ -131,7 +132,6 @@
         cursor: pointer;
     }
     &__open-menu {
-        background: #232226;
         border-radius: 4px;
         display: flex;
         align-items: center;
@@ -141,9 +141,6 @@
         position: absolute;
         right: -10px;
         cursor: pointer;
-        &:hover {
-            background: linear-gradient(216.36deg, rgba(255, 139, 0, 0.36) 21.2%, rgba(87, 76, 64, 0.47) 88.03%);
-        }
     }
     &__menu {
         background: $dark-gray;
@@ -178,6 +175,9 @@
             padding: 7px 7px;
             span {
                 display: none;
+            }
+            img {
+                margin: 0;
             }
         }
     }

@@ -15,7 +15,10 @@
     <router-link to="/personal" class="dl-auth-after__ava">
       <img :src="user.avatar" width="44" height="44" />
     </router-link>
-    <div class="dl-auth-after__open-menu" v-on:click="openMenu">
+    <div
+      class="dl-auth-after__open-menu dl-button--grey-orange"
+      v-on:click="openMenu"
+    >
       <svg
         width="13"
         height="13"
