@@ -1,13 +1,14 @@
 .dl-cases {
-  margin-bottom: 91px;
-  &__wrap {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 230px);
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 auto;
-  }
+    margin-bottom: 91px;
+    &__wrap {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 230px);
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+        row-gap: 48px;
+    }
 }
 .dl-case {
   background: #232226;
@@ -85,7 +86,6 @@
   }
   &__get {
   }
-
   &__money {
     width: 150px;
     height: 34px;

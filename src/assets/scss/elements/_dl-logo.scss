@@ -1,11 +1,12 @@
-.dl-logo{
+.dl-logo {
     width: 89px;
     height: 46px;
-    margin-right: 7px ;
+    margin-right: 7px;
     display: flex;
     align-items: center;
-    &__img{
-
+    position: relative;
+    z-index: 5;
+    &__img {
         width: 89px;
     }
 }

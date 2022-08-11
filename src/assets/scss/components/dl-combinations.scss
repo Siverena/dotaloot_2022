@@ -21,12 +21,13 @@
         flex-wrap: wrap;
         justify-content: space-between;
         margin: 0 auto;
+        row-gap: 30px;
     }
 }
 .dl-combination {
-    border-radius: 10px;
-    width: 241px;
-    padding: 13px 14px;
+    border-radius: 30px;
+    width: 230px;
+    padding: 13px 20px;
     color: $white;
     background-size: 100% 100%;
     background-position: center;
@@ -34,7 +35,7 @@
     &__header {
         display: flex;
         align-items: center;
-        margin-bottom: 39px;
+        margin-bottom: 52px;
     }
     &__img {
         border-radius: 10px;
@@ -74,22 +75,22 @@
         text-transform: capitalize;
         width: 154px;
         margin: 0 auto 33px;
-        background-color: #ff77e1;
-        // &--orange {
-        //     background-color: $orange;
-        // }
-        // &--rare {
-        //     background-color: $rare;
-        // }
-        // &--legendary {
-        //     background-color: $legendary;
-        // }
-        // &--mythical {
-        //     background-color: $mythical;
-        // }
-        // &--season {
-        //     background-color: $season;
-        // }
+        // background-color: #ff77e1;
+        &--orange {
+            background-color: $orange;
+        }
+        &--rare {
+            background-color: $rare;
+        }
+        &--legendary {
+            background-color: $legendary;
+        }
+        &--mythical {
+            background-color: $mythical;
+        }
+        &--season {
+            background-color: $season;
+        }
     }
     &__count {
         font-style: normal;
@@ -122,7 +123,7 @@
         }
     }
     &__tag {
-        border-radius: 9px;
+        border-radius: 15px;
         padding: 11px 17px;
         font-style: normal;
         font-weight: 700;

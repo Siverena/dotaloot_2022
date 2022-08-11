@@ -50,6 +50,10 @@
           </div>
         </div>
       </div>
+      <div class="dl-user-contract-detail__profit">
+        <span>Вы получили </span> <br />
+        {{ сontractSum }} ₽
+      </div>
       <!-- 1 итем-->
     </div>
   </div>

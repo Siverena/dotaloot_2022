@@ -36,14 +36,14 @@
         path {
           fill: $orange;
         }
-      }
-    }
-    &--disabled {
-      cursor: default;
-      color: $grey;
-      svg {
-        path {
-          fill: $grey;
+        &--disabled {
+            cursor: default;
+            color: #363637;
+            svg {
+                path {
+                    fill: #363637;
+                }
+            }
         }
       }
     }
@@ -74,22 +74,47 @@
       background-color: #616161;
       margin-right: 9px;
     }
-    &--active {
-      background: #323232;
-      border-radius: 9px;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 17px;
-      display: flex;
-      align-items: center;
-      text-transform: uppercase;
+    &__switch-item {
+        padding: 9px 43px 13px 58px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+        text-align: right;
+        text-transform: uppercase;
+        margin: 0 -10px;
+        color: $light-gray;
+        &::before {
+            content: "";
+            width: 3px;
+            height: 4px;
+            background-color: $light-gray;
+            margin-right: 9px;
+        }
+        &:hover {
+            color: $orange;
+            &::before {
+                background-color: $orange;
+            }
+        }
+        &--active {
+            background: #323232;
+            border-radius: 9px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
 
-      color: #ffffff;
+            color: $white;
 
-      &::before {
-        background-color: #ffffff;
-      }
+            &::before {
+                background-color: $white;
+            }
+        }
     }
   }
 }

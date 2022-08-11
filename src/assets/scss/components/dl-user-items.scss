@@ -42,11 +42,100 @@
     }
   }
 }
+.dl-user-no-items {
+    &__get {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        background: linear-gradient(267.71deg, rgba(255, 139, 0, 0.06) 43.42%, rgba(23, 22, 27, 0) 101.67%);
+        border: 1px solid #474747;
+        border-radius: 10px;
+        color: #ffffff;
+        margin: 0 auto;
+        padding: 32px 50px;
+        width: fit-content;
+        margin-bottom: 100px;
+        span {
+            color: $orange;
+        }
+    }
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__block {
+        background-image: linear-gradient(266.74deg, rgba(255, 139, 0, 0.06) 6.87%, rgba(217, 217, 217, 0) 96.69%);
+        border: 1px solid #474747;
+        border-radius: 15px;
+        padding: 50px;
+        width: 606px;
+        position: relative;
+        align-self: flex-start;
+    }
+    &__content-wrap {
+        grid-template-columns: repeat(auto-fill, 230px);
+        display: grid;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        row-gap: 30px;
+    }
+    &__text {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+        text-transform: uppercase;
+        color: $orange;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: 0;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 279px;
+            height: 3px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: 0;
+            background-image: linear-gradient(to right, transparent, #ff8b00, transparent);
+        }
+    }
+}
+
 @media (max-width: 1440px) {
+    .dl-user-no-items {
+        &__wrap {
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__block {
+            margin: 0 auto 30px;
+        }
+    }
 }
 @media (max-width: 833px) {
-  .dl-user-items {
-    grid-template-columns: repeat(auto-fill, 168px);
-    row-gap: 13px;
-  }
+    .dl-user-items {
+        grid-template-columns: repeat(auto-fill, 168px);
+        row-gap: 13px;
+    }
+    .dl-user-no-items {
+        &__wrap {
+            flex-direction: column;
+            justify-content: center;
+        }
+        &__block {
+            width: 100%;
+            padding: 14px 14px 32px 14px;
+        }
+        &__content-wrap {
+            grid-template-columns: repeat(auto-fill, 165px);
+        }
+    }
 }

@@ -11,12 +11,5 @@
     align-items: center;
     justify-content: center;
     margin-left: 10px;
-    background: #232226;
     border-radius: 4px;
-    &:hover{
-        background: linear-gradient(216.36deg, rgba(255, 139, 0, 0.36) 21.2%, rgba(87, 76, 64, 0.47) 88.03%);
-    }
-    &:active{
-        background: #FF8B00;
-    }
 }

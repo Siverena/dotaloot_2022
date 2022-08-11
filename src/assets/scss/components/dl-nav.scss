@@ -22,6 +22,23 @@
     &--header-tablet {
       display: none;
     }
+    &--disabled {
+      cursor: default;
+      color: #363637;
+      svg {
+        path {
+          fill: #363637 !important;
+        }
+      }
+      &:hover {
+        color: #363637 !important;
+        svg {
+          path {
+            fill: #363637 !important;
+          }
+        }
+      }
+    }
     svg {
       margin-right: 12px;
       flex-shrink: 0;
@@ -107,6 +124,17 @@
       padding: 12px 25px;
       svg {
         margin: 0 0 4px 0;
+      }
+      &--promotion {
+        &::before {
+          left: 0;
+          right: 0;
+          top: 9px;
+          margin: 0 auto;
+          width: 17px;
+          height: 17px;
+          filter: blur(8px);
+        }
       }
     }
   }

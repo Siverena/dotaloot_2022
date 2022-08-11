@@ -18,7 +18,21 @@
       :catId="categories[1].id"
       >{{ categories[1].name }}</DlCases
     >
-    <DlBannerFreeItem />
+
+    <DlBaseBanner class="dl-banner-free-item">
+      <template v-slot:header>больше бесплатных предметов!</template>
+      <template v-slot:text
+        >Подпишись, чтобы участвовать в бесплатных раздачах крутых
+        предметов!</template
+      >
+      <template v-slot:buttons>
+        <button class="dl-banner-free-item__button">
+          <img src="../../assets/img/dl-banner-free-item/vk.svg" alt="" />
+          ПОДПИСАТЬСЯ
+        </button>
+      </template>
+    </DlBaseBanner>
+
     <DlCases
       v-if="!loading"
       :cases="categories[2].cases"

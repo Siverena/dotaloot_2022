@@ -52,4 +52,16 @@
       background-image: none;
     }
   }
+  &--grey-orange {
+    color: $light-gray;
+    background: $grey;
+    &:hover {
+      background: linear-gradient(216.36deg, #5c320b 21.2%, #2e2b29 88.03%);
+      color: $orange;
+    }
+    &:active {
+      color: $grey;
+      background: $orange;
+    }
+  }
 }
