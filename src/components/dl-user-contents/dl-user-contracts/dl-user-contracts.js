@@ -16,9 +16,7 @@ export default {
   },
   methods: {
     showDetailContract(index) {
-      console.log(index);
       this.currentContract = this.contracts[index];
-      console.log(this.currentContract);
       this.visibleDetail = true;
     },
   },

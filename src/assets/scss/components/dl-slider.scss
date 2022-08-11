@@ -3,6 +3,8 @@
   overflow: hidden;
   height: 607px;
   order: -1;
+  position: relative;
+  z-index: 0;
   .agile {
     &__nav-button {
       border: none;
@@ -35,16 +37,11 @@
       position: absolute;
       bottom: 25px;
       &::after {
-        content: '';
+        content: "";
         display: block;
         width: 100%;
         position: absolute;
-        background-image: linear-gradient(
-          to right,
-          transparent,
-          $orange,
-          transparent
-        );
+        background-image: linear-gradient(to right, transparent, $orange, transparent);
         height: 2px;
         bottom: -15px;
         left: 0;
@@ -62,7 +59,7 @@
 /***Стили для  слайда Получи подарок***/
 .dl-slide-get-gift {
   text-transform: uppercase;
-  background-image: url('@/assets/img/dl-slider/dl-slider1.jpg');
+  background-image: url("@/assets/img/dl-slider/dl-slider1.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -72,7 +69,7 @@
   }
   &__head {
     color: $white;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-style: normal;
     font-weight: 900;
     font-size: 86px;

@@ -2,11 +2,13 @@
     display: flex;
     width: 100%;
     height: 80px;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     margin-bottom: 70px;
     &__menu {
         width: 115px;
         height: 80px;
+        position: relative;
+        z-index: 2;
     }
     &__menu-item {
         font-style: normal;
@@ -20,8 +22,13 @@
         opacity: 0.6;
         padding: 5px 31px;
         background: $dark-gray;
-        &:not(:last-child) {
-            border-bottom: 1px solid $light-gray;
+        border-bottom: 1px solid rgba(217, 217, 217, 0.25);
+        border-top: 1px solid rgba(217, 217, 217, 0.25);
+        &:last-child {
+            border-bottom: none;
+        }
+        &:first-child {
+            border-top: none;
         }
         svg {
             margin-right: 7px;
@@ -34,7 +41,7 @@
             color: $orange;
             background: $grey;
             opacity: 1;
-            border-bottom: none !important;
+
             svg {
                 path {
                     opacity: 1;
@@ -86,6 +93,7 @@
         display: flex;
         margin-top: auto;
         z-index: 5;
+        text-decoration: none;
     }
     &__img-case {
         position: absolute;
@@ -124,7 +132,12 @@
         text-decoration: none;
         width: 77px;
     }
+    &:not(.dl-drophistory-item--exs) {
+        position: relative;
+        z-index: 5;
+    }
     &--exs {
+        position: relative;
         border: 3px solid;
         border-image: linear-gradient(
                 90deg,
@@ -136,12 +149,26 @@
                 #f5eb5a 100%
             )
             30;
-
+        &::before {
+            content: "";
+            display: block;
+            width: 300px;
+            height: 240px;
+            background-image: url(../assets/img/dl-lenta/light.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: -96px;
+            top: -77px;
+            z-index: 1;
+        }
         .dl-drophistory-item__content {
             box-shadow: inset 1px -10px 15px rgba(255, 214, 67, 0.3), inset -1px 10px 15px rgba(255, 214, 67, 0.3) !important;
             border-color: transparent !important;
             height: 100%;
             border-width: 0;
+            z-index: 2;
+            position: relative;
         }
     }
 }
