@@ -55,7 +55,7 @@
     </div>
 
     <div v-if="isMenuSow" class="dl-auth-after__menu" @click="closeMenu">
-      <!-- <router-link to="/personal" class="dl-auth-after__menu-link">
+      <router-link to="/personal" class="dl-auth-after__menu-link">
         <svg
           width="22"
           height="22"
@@ -77,7 +77,7 @@
           />
         </svg>
         Профиль
-      </router-link> -->
+      </router-link>
       <div class="dl-auth-after__menu-link" @click="logout">
         <svg
           width="25"
