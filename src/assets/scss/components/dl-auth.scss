@@ -15,7 +15,7 @@
     align-items: center;
     text-align: center;
     text-transform: uppercase;
-    padding: 9px 16px 9px 9px;
+    padding: 2px 16px 2px 9px;
 
     color: $light-gray;
     &__key {
@@ -32,15 +32,19 @@
         margin-left: 5px;
     }
     &__button {
-        border-radius: 14px;
-        width: 41px;
-        height: 41px;
+        border-radius: 10px;
+        width: 30px;
+        height: 30px;
         display: flex;
         align-items: center;
         background-color: transparent;
         border: none;
         justify-content: center;
         cursor: pointer;
+        img {
+            width: 20px;
+            height: 20px;
+        }
         &--vk {
             background-color: #3bbaee;
             margin-right: 4px;

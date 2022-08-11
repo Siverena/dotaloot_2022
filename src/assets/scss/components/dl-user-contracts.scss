@@ -111,4 +111,30 @@
         grid-template-columns: repeat(auto-fill, 168px);
         row-gap: 13px;
     }
+
+    .dl-user-contract {
+        width: 168px;
+        height: 107px;
+
+        &__base {
+        }
+        &__info {
+        }
+        &__coast {
+        }
+
+        &__name {
+            width: 168px;
+            font-size: 12px;
+            line-height: 15px;
+        }
+        &__contract-price {
+        }
+        &__more {
+        }
+        &__hover {
+        }
+        &:hover {
+        }
+    }
 }

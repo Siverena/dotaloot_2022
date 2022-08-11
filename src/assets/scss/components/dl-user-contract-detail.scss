@@ -130,4 +130,123 @@
         overflow: hidden;
         border-radius: 10px;
     }
+    &__profit {
+        display: none;
+    }
+}
+
+@media (max-width: 1440px) {
+    .dl-user-contract-detail {
+        display: block;
+        max-width: 667px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 85px;
+        padding: 38px;
+        &__win {
+            margin: 0 auto;
+        }
+        &__win-info {
+        }
+        &__win-price {
+        }
+        &__win-name {
+        }
+        &__compound-wrap {
+            margin-top: 84px;
+            grid-template-columns: repeat(auto-fill, 188px);
+            &::before {
+                top: -57px;
+                left: 0;
+                right: 0;
+                margin: 0 auto;
+                transform: rotate(90deg);
+            }
+        }
+        &__item-bg {
+            height: 120px;
+            width: 188px;
+        }
+        &__item {
+        }
+        &__item-info {
+        }
+        &__item-price {
+        }
+        &__item-name {
+            width: 188px;
+        }
+        &__profit {
+            border: 1px solid #ffffff;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: $white;
+
+            font-size: 25px;
+            font-weight: 700;
+            line-height: 11px;
+            letter-spacing: 0em;
+            text-align: center;
+
+            grid-column-start: 2;
+            grid-column-end: 4;
+            span {
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 15px;
+                letter-spacing: 0em;
+                text-align: center;
+            }
+        }
+    }
+}
+@media (max-width: 833px) {
+    .dl-user-contract-detail {
+        display: block;
+        max-width: none;
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 0;
+        &__win {
+            margin: 0 auto;
+        }
+        &__win-info {
+        }
+        &__win-price {
+        }
+        &__win-name {
+        }
+        &__compound-wrap {
+            margin-top: 28px;
+            grid-template-columns: repeat(auto-fill, 109px);
+            &::before {
+                display: none;
+            }
+        }
+        &__item-bg {
+            width: 109px;
+            height: 70px;
+        }
+        &__item {
+        }
+        &__item-info {
+        }
+        &__item-price {
+        }
+        &__item-name {
+            width: 109px;
+            font-size: 9px;
+            line-height: 9px;
+        }
+        &__profit {
+            line-height: 12px;
+            span {
+                line-height: 12px;
+            }
+        }
+    }
 }
