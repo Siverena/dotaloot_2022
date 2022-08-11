@@ -70,6 +70,129 @@
         </div>
       </div>
     </div>
+    <div
+      v-if="status === '' && page === 'personal'"
+      class="dl-case-item__actions"
+    >
+      <span>+8000 маны</span>
+      <div class="dl-button dl-button--green dl-case-item__sell-button">
+        Продать за {{ item.price }} ₽
+      </div>
+      <div
+        @click="checkAvailability"
+        class="dl-button dl-case-item__take-button"
+      >
+        забрать
+        <svg
+          width="18"
+          height="9"
+          viewBox="0 0 18 9"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M8.8098 0.0908203L17.6157 8.47958H0.00388145L8.8098 0.0908203Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+    </div>
+    <div
+      v-if="status === 'checkingAvailability'"
+      class="dl-case-item__checking"
+    >
+      <div class="lds-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <p>уточняем наличие</p>
+    </div>
+    <div
+      v-if="status === 'waitingForSeller'"
+      class="dl-case-item__waiting-for-seller"
+    >
+      <div class="dl-case-item__countdown" @click="stopTimer()">
+        <svg
+          width="27"
+          height="27"
+          viewBox="0 0 27 27"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="13.5"
+            cy="13.5"
+            r="12.5"
+            stroke="#49B32C"
+            stroke-width="2"
+          />
+          <path
+            d="M11.4751 8.42529C11.4751 7.87301 11.9228 7.42529 12.4751 7.42529H12.5001C13.0524 7.42529 13.5001 7.87301 13.5001 8.42529V15.5253H11.4751V8.42529Z"
+            fill="#49B32C"
+          />
+          <path
+            d="M16.5498 14.1753C17.1021 14.1753 17.5498 14.623 17.5498 15.1753V15.2003C17.5498 15.7526 17.1021 16.2003 16.5498 16.2003H11.4748V14.1753H16.5498Z"
+            fill="#49B32C"
+          />
+        </svg>
+        <span>{{ dataTimer.minutes }}:{{ dataTimer.seconds }}</span>
+      </div>
+      <p>ожидаем продавца</p>
+    </div>
+    <div
+      v-if="status === 'changeReady'"
+      class="dl-case-item__waiting-for-change"
+    >
+      <div class="dl-case-item__countdown" @click="stopTimer()">
+        <svg
+          width="27"
+          height="27"
+          viewBox="0 0 27 27"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="13.5"
+            cy="13.5"
+            r="12.5"
+            stroke="#ffffff"
+            stroke-width="2"
+          />
+          <path
+            d="M11.4751 8.42529C11.4751 7.87301 11.9228 7.42529 12.4751 7.42529H12.5001C13.0524 7.42529 13.5001 7.87301 13.5001 8.42529V15.5253H11.4751V8.42529Z"
+            fill="#ffffff"
+          />
+          <path
+            d="M16.5498 14.1753C17.1021 14.1753 17.5498 14.623 17.5498 15.1753V15.2003C17.5498 15.7526 17.1021 16.2003 16.5498 16.2003H11.4748V14.1753H16.5498Z"
+            fill="#ffffff"
+          />
+        </svg>
+        <span>{{ dataTimer.minutes }}:{{ dataTimer.seconds }}</span>
+      </div>
+      <p>обмен готов</p>
+      <div class="dl-button dl-case-item__change-button" @click="takeItem">
+        забрать
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="9"
+          viewBox="0 0 20 9"
+          fill="none"
+        >
+          <path d="M10 0L19.5263 9H0.473721L10 0Z" fill="#17161B" />
+        </svg>
+      </div>
+    </div>
   </div>
 </template>
 <script src="./dl-case-item.js"></script>

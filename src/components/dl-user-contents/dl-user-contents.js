@@ -21,6 +21,9 @@ export default {
     DlUserContracts,
   },
   computed: {
+    /**
+     * @returns * отфильтрованный массив предметов
+     */
     filteredDrops() {
       let drops = [];
       if (this.isActive) {
@@ -44,17 +47,13 @@ export default {
     },
     itemsCount() {
       if (this.isPersonalPage) {
-        console.log('filteredDrops.length: ', this.filteredDrops.length);
         return this.filteredDrops.length;
       } else {
-        console.log('gamer.drops.length: ', this.gamer.drops.length);
         return this.gamer.drops ? this.gamer.drops.length : 0;
       }
     },
     displayedItems() {
-      return this.isPersonalPage
-        ? this.filteredDrops.slice(0, this.numberOfDisplayedItems)
-        : this.gamer.drops.slice(0, this.numberOfDisplayedItems);
+      return this.filteredDrops.slice(0, this.numberOfDisplayedItems);
     },
     displayedContracts() {
       return this.gamer.contracts.slice(0, this.numberOfDisplayedContracts);
@@ -69,12 +68,20 @@ export default {
     },
     async changeActive(status) {
       this.isActive = status;
+      if (this.isPersonalPage) {
+        this.numberOfDisplayedItems = Math.min(this.filteredDrops.length, 9);
+      } else {
+        this.numberOfDisplayedItems = Math.min(this.gamer.drops.length, 10);
+      }
     },
+    /**
+     * Показать ещё контракты
+     */
     showMore() {
       if (this.filterType === 'box') {
         this.numberOfDisplayedItems += 5;
-        if (this.numberOfDisplayedItems > this.gamer.drops.length) {
-          this.numberOfDisplayedItems = this.gamer.drops.length;
+        if (this.numberOfDisplayedItems > this.filteredDrops.length) {
+          this.numberOfDisplayedItems = this.filteredDrops.length;
         }
       }
       if (this.filterType === 'contract') {

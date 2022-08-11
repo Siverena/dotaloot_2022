@@ -19,8 +19,8 @@
     :contracts="displayedContracts"
   />
   <div class="dl-user-items__wrapper">
-    <div class="dl-user-items__open-case dl-button--orange">
-      открыть кейс
+    <router-link to="/" class="dl-user-items__open-case dl-button--orange">
+      открыть кейсы
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="30"
@@ -33,16 +33,27 @@
           fill="#000011"
         />
       </svg>
-    </div>
+    </router-link>
     <div
       v-if="
-        filterType === 'box' && gamer.drops?.length !== numberOfDisplayedItems
+        filterType === 'box' && filteredDrops.length !== numberOfDisplayedItems
       "
       @click="showMore()"
-      class="dl-user-items__show-more dl-button--orange"
+      class="dl-user-items__show-more dl-button--grey-orange"
     >
       ПОКАЗАТЬ ЕЩЁ предметы
-      <img src="@/assets/img/dl-contract/arrow.png" alt="" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="21"
+        height="13"
+        viewBox="0 0 21 13"
+        fill="none"
+      >
+        <path
+          d="M12.8389 10.7059L21 2.19853L18.7109 0.191177L10.4502 8.31618L2.48815 0L0 2.38971L8.26066 10.5147V10.6103L10.6493 13L12.5403 10.9926L12.8389 10.8015V10.7059Z"
+          fill="#FF8B00"
+        />
+      </svg>
     </div>
     <div
       v-if="
@@ -50,10 +61,21 @@
         gamer.contracts?.length !== numberOfDisplayedContracts
       "
       @click="showMore()"
-      class="dl-user-items__show-more dl-button--orange"
+      class="dl-user-items__show-more dl-button--grey-orange"
     >
       ПОКАЗАТЬ ЕЩЁ контракты
-      <img src="@/assets/img/dl-contract/arrow.png" alt="" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="21"
+        height="13"
+        viewBox="0 0 21 13"
+        fill="none"
+      >
+        <path
+          d="M12.8389 10.7059L21 2.19853L18.7109 0.191177L10.4502 8.31618L2.48815 0L0 2.38971L8.26066 10.5147V10.6103L10.6493 13L12.5403 10.9926L12.8389 10.8015V10.7059Z"
+          fill="#FF8B00"
+        />
+      </svg>
     </div>
   </div>
 </template>

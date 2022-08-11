@@ -1,9 +1,9 @@
 export default {
   name: 'DlCaseItem',
-  props: ['item'],
+  props: ['item', 'page'],
   data() {
     return {
-      status: '', //{'' || checkingAvailability || waitingForSeller || changeReady }
+      status: '', //{'' displayActions || checkingAvailability || waitingForSeller || changeReady }
       deadline: null,
       timer: null,
       dataTimer: {
@@ -15,28 +15,42 @@ export default {
     };
   },
   methods: {
+    /**
+     * Проверка доступности
+     */
     async checkAvailability() {
-      try {
-        this.status = 'checkingAvailability';
-        setTimeout(() => {
-          this.status = 'waitingForSeller';
-        }, 2 * 60 * 1000);
-        // const response = await Axios.post('https://api');
-        // if (response.status !== 200) {
-        //   return;
-        // }
-      } catch (e) {
-        console.log(e);
-      }
+      this.status = 'checkingAvailability';
+      setTimeout(() => {
+        this.waitForSeller();
+      }, 10 * 1000);
     },
-    waitForSeller() {
-      this.deadline = new Date(Date.now() + 5 * 60 * 1000);
+    /**
+     * Ожидание продавца
+     * @param {Number} min - количество минут
+     */
+    waitForSeller(min = 1) {
+      this.status = 'waitingForSeller';
+      this.deadline = new Date(Date.now() + min * 10 * 1000);
+      this.startTimer(this.waitForChange);
+    },
+    /**
+     * Ожидание обмена
+     * @param {Number} min - количество минут
+     */
+    waitForChange(min = 1) {
+      this.status = 'changeReady';
+      this.deadline = new Date(Date.now() + min * 10 * 1000);
       this.startTimer();
     },
-    countdownTimer() {
+    /**
+     * Таймер
+     * @param {Function} finFunc - функция, запускаемая после истечения таймера
+     */
+    countdownTimer(finFunc) {
       const diff = this.deadline - new Date();
       if (diff <= 0) {
-        clearInterval(this.timer);
+        this.stopTimer();
+        finFunc();
       }
       const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
       const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) % 24 : 0;
@@ -47,16 +61,16 @@ export default {
       this.dataTimer.minutes = minutes < 10 ? '0' + minutes : minutes;
       this.dataTimer.seconds = seconds < 10 ? '0' + seconds : seconds;
     },
-    startTimer() {
-      this.countdownTimer();
-      this.timer = setInterval(this.countdownTimer, 1000);
+    startTimer(finFunc = () => {}) {
+      this.timer = setInterval(this.countdownTimer, 200, finFunc);
     },
     stopTimer() {
-      clearInterval(this.timer);
+      clearTimeout(this.timer);
+      // this.timer = null;
     },
-    handleClick() {
-      if (this.status === '') this.waitForSeller();
-      else this.stopTimer();
+    takeItem() {
+      if (this.status === 'changeReady') this.status = '';
+      this.stopTimer();
     },
   },
 };
