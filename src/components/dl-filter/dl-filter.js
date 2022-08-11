@@ -7,6 +7,7 @@ export default {
     'changeActive',
     'isActive',
     'filterType',
+    'itemsCount',
   ],
   watch: {},
 };

@@ -1,42 +1,40 @@
 .dl-filters {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  min-height: 85px;
+  &__list {
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
-    padding-right: 10px;
-    &__list {
-        display: flex;
-        align-items: center;
-        padding: 0;
+    padding: 0;
+  }
+  &__item {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    color: $light-gray;
+    margin-right: 30px;
+    cursor: pointer;
+    white-space: nowrap;
+    svg {
+      width: 20px;
+      margin-right: 15px;
+      path {
+        fill: $light-gray;
+      }
     }
-    &__item {
-        font-style: normal;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 19px;
-        display: flex;
-        align-items: center;
-        text-align: center;
-        text-transform: uppercase;
-        color: $light-gray;
-        margin-right: 30px;
-        cursor: pointer;
-        white-space: nowrap;
-        svg {
-            width: 20px;
-            margin-right: 15px;
-            path {
-                fill: $light-gray;
-            }
-        }
 
-        &--active {
-            color: $white;
-            border-bottom: 3px solid $orange;
-            svg {
-                path {
-                    fill: $orange;
-                }
-            }
+    &--active {
+      color: $white;
+      border-bottom: 3px solid $orange;
+      svg {
+        path {
+          fill: $orange;
         }
         &--disabled {
             cursor: default;
@@ -47,14 +45,34 @@
                 }
             }
         }
+      }
     }
-    &__switch {
-        height: 53px;
-        display: flex;
-        background: rgba(34, 33, 38, 0.8);
-        border-radius: 9px;
-        margin-left: auto;
-        cursor: pointer;
+  }
+  &__switch {
+    height: 53px;
+    display: flex;
+    background: rgba(34, 33, 38, 0.8);
+    border-radius: 9px;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  &__switch-item {
+    padding: 9px 43px 13px 58px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    text-transform: uppercase;
+    margin: 0 -10px;
+    color: #616161;
+    &::before {
+      content: '';
+      width: 3px;
+      height: 4px;
+      background-color: #616161;
+      margin-right: 9px;
     }
     &__switch-item {
         padding: 9px 43px 13px 58px;
@@ -98,56 +116,57 @@
             }
         }
     }
+  }
 }
 @media (max-width: 1440px) {
-    .dl-filters {
-        flex-wrap: wrap;
-        margin-bottom: 102px;
-        &__list {
-            justify-content: space-between;
-            width: 100%;
-        }
-        &__item {
-            svg {
-                width: 20px;
-                margin-right: 15px;
-            }
-        }
-        &__switch {
-            margin: 0 auto;
-            &--contract {
-                margin: 0 0 0 auto;
-            }
-        }
-        &__switch-item {
-        }
+  .dl-filters {
+    flex-wrap: wrap;
+    margin-bottom: 102px;
+    &__list {
+      justify-content: space-between;
+      width: 100%;
     }
+    &__item {
+      svg {
+        width: 20px;
+        margin-right: 15px;
+      }
+    }
+    &__switch {
+      margin: 0 auto;
+      &--contract {
+        margin: 0 0 0 auto;
+      }
+    }
+    &__switch-item {
+    }
+  }
 }
 @media (max-width: 833px) {
-    .dl-filters {
-        margin-bottom: 38px;
-        &__list {
-            justify-content: space-between;
-            width: 100%;
-            overflow-x: scroll;
-            &::-webkit-scrollbar {
-                width: 0;
-            }
-        }
-        &__item {
-            font-size: 14px;
-            line-height: 17px;
-            svg {
-                width: 19px;
-                margin-right: 10px;
-            }
-        }
-        &__switch {
-            &--contract {
-                margin: 0 auto;
-            }
-        }
-        &__switch-item {
-        }
+  .dl-filters {
+    margin-bottom: 38px;
+    &__list {
+      justify-content: space-between;
+      width: 100%;
+      overflow-x: scroll;
+      &::-webkit-scrollbar {
+        width: 0;
+      }
     }
+    &__item {
+      font-size: 14px;
+      line-height: 17px;
+      svg {
+        width: 19px;
+        margin-right: 10px;
+      }
+    }
+    &__switch {
+      &--contract {
+        margin: 0 auto;
+      }
+    }
+    &__switch-item {
+    }
+  }
 }

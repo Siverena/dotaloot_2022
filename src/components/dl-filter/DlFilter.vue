@@ -19,7 +19,7 @@
           />
         </svg>
 
-        Предметы ({{ gamer.drops.length }})
+        Предметы ({{ itemsCount }})
       </li>
       <li
         class="dl-filters__item"
@@ -42,7 +42,7 @@
             fill="white"
           />
         </svg>
-        Контракты ({{ gamer.contracts ? gamer.contracts.length : '' }})
+        Контракты ({{ gamer.contracts ? gamer.contracts.length : 0 }})
       </li>
       <li class="dl-filters__item dl-filters__item--disabled">
         <svg

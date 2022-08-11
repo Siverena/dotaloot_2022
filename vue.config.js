@@ -8,4 +8,15 @@ module.exports = defineConfig({
       rewrites: [{ from: /./, to: '/' }],
     },
   },
+  // configureWebpack: {
+  //   plugins: [new NodePolyfillPlugin()],
+  //   resolve: {
+  //     fallback: {
+  //       fs: false,
+  //       path: false,
+  //       os: false,
+  //       net: false,
+  //     },
+  //   },
+  // },
 });

@@ -159,6 +159,7 @@
             </defs>
           </svg>
         </div>
+        <div class="dl-case__open-button">открыть кейс</div>
       </div>
     </div>
   </div>
