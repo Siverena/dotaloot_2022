@@ -1,0 +1,60 @@
+.dl-policy {
+    color: $white;
+    p {
+        line-height: 25px;
+    }
+    &__h2 {
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    &__vk {
+        margin-top: 40px;
+        a {
+            color: $orange;
+        }
+    }
+    ol {
+        ounter-reset: num;
+        position: relative;
+    }
+    li {
+        list-style: none;
+        counter-increment: num;
+        line-height: 28px;
+    }
+    li::before {
+        content: counter(num);
+        position: absolute;
+        left: -8px;
+        text-align: right;
+        width: 40px;
+    }
+
+    /* 2-й уровень */
+    ol ol {
+        counter-reset: num2;
+    }
+    ol ol > li {
+        counter-increment: num2;
+    }
+    ol ol > li::before {
+        content: counter(num) "." counter(num2);
+    }
+
+    /* 3-й уровень */
+    ol ol ol {
+        counter-reset: num3;
+    }
+    ol ol ol > li {
+        counter-increment: num3;
+    }
+    ol ol ol > li::before {
+        content: counter(num) "." counter(num2) "." counter(num3);
+    }
+    li {
+        a {
+            color: $orange;
+        }
+    }
+}

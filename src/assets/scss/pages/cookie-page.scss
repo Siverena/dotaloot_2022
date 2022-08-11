@@ -1,0 +1,34 @@
+.dl-cookie {
+    color: $white;
+    a {
+        color: $orange;
+    }
+    &__header-lvl2 {
+        font-size: 25px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    &__table {
+        margin-top: 10px;
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: separate;
+        border: 1px solid $light-gray;
+        th {
+            background-color: $grey;
+            padding: 10px;
+            border: 1px solid $light-gray;
+        }
+        td {
+            padding: 20px;
+            border: 1px solid $light-gray;
+        }
+    }
+    ul {
+        li {
+            a {
+                margin-left: 10px;
+            }
+        }
+    }
+}

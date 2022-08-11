@@ -1,15 +1,12 @@
 <template>
-  <div class="container">
-    <DlSectionHeader>404 - Страница не найдена</DlSectionHeader>
-    <section class="dl-help">Упс! Такой страницы не существует</section>
-  </div>
+  <section class="dl-not-found">
+    <p class="dl-not-found__error-code">404</p>
+    <p class="dl-not-found__error-text">Страница не найдена</p>
+    <router-link to="/" class="dl-not-found__link">на главную</router-link>
+  </section>
 </template>
 <script>
-import DlSectionHeader from '@/elements/dl-section-header/DlSectionHeader.vue';
 export default {
   name: 'PageNotFound',
-  components: {
-    DlSectionHeader,
-  },
 };
 </script>
