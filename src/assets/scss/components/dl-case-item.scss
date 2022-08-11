@@ -130,11 +130,9 @@
       text-align: center;
       text-transform: uppercase;
       color: #17161b;
-
       border-radius: 6px;
       font-style: normal;
       font-weight: 900;
-
       padding: 7px 5px;
       background: #ff8b00;
       cursor: pointer;
@@ -145,7 +143,6 @@
       padding: 4px;
       justify-content: space-between;
     }
-
     .dl-case-item__gift-coast {
       background: rgba(0, 0, 0, 0.5);
       border-radius: 6px;
@@ -189,6 +186,17 @@
     top: 0;
     left: 0;
     box-shadow: 1px -3px 33px 0px #6478de;
+    // &::before {
+    //   // position: absolute;
+    //   width: 100%;
+    //   height: 100%;
+    //   // content: '';
+    //   // display: block;
+    //   background: #6478de;
+    //   filter: blur(45px);
+    //   border-radius: 10px;
+    //   opacity: 0.1;
+    // }
     span {
       position: relative;
       font-style: normal;
@@ -251,13 +259,17 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
-    box-shadow: 1px -3px 33px 0px $green;
+    box-shadow: 1px -3px 33px 0px $arcana;
     &::before {
+      position: absolute;
       width: 100%;
       height: 100%;
+      content: '';
+      display: block;
       background-color: $arcana;
-      box-shadow: 0px 0px 20px 0px $green;
+      filter: blur(45px);
+      border-radius: 10px;
+      opacity: 0.1;
     }
     p {
       font-style: normal;
@@ -285,23 +297,30 @@
     color: $green;
     box-shadow: 1px -3px 33px 0px #3448ff;
     &::before {
+      position: absolute;
+      content: '';
+      display: block;
       width: 100%;
       height: 100%;
       background-color: #3448ff;
-      box-shadow: 1px -3px 33px 0px #3448ff;
+      filter: blur(45px);
+      border-radius: 10px;
+      opacity: 0.2;
     }
     .dl-case-item__countdown {
       display: flex;
       align-items: center;
       margin-bottom: 16px;
+      justify-content: center;
+      span {
+        width: 92px;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 31px;
+        margin-left: 12px;
+      }
     }
-    span {
-      width: 92px;
-      font-weight: 700;
-      font-size: 26px;
-      line-height: 31px;
-      margin-left: 12px;
-    }
+
     p {
       font-weight: 600;
       font-size: 14px;
@@ -326,11 +345,11 @@
     flex-direction: column;
     font-style: normal;
     color: $white;
-    box-shadow: 1px -3px 33px 0px #3448ff;
     .dl-case-item__countdown {
       display: flex;
       align-items: center;
       margin-bottom: 16px;
+      justify-content: center;
       span {
         width: 92px;
         font-weight: 700;
@@ -369,9 +388,6 @@
       &__actions {
         display: flex;
       }
-      &__name {
-        display: none;
-      }
     }
   }
 }
@@ -382,8 +398,71 @@
   .dl-case-item {
     width: 168px;
     height: 106px;
-
     background-size: 168px 106px;
+    &--gift {
+      .dl-case-item__take {
+        height: 23px;
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+    &__actions {
+      padding: 4px 6px;
+      .dl-case-item__sell-button {
+        width: 155px;
+        height: 24px;
+        font-size: 12px;
+        line-height: 15px;
+        margin-top: 5px;
+      }
+      .dl-case-item__take-button {
+        width: 155px;
+        height: 24px;
+        font-size: 10px;
+        line-height: 12px;
+        margin-top: 5px;
+        svg {
+          width: 13px;
+          margin-left: 1px;
+        }
+      }
+    }
+    &__checking {
+      padding-bottom: 23px;
+      p {
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+    &__waiting-for-seller,
+    &__waiting-for-change {
+      .dl-case-item__countdown {
+        margin-bottom: 7px;
+        span {
+          font-size: 18px;
+          line-height: 22px;
+          margin-left: 7px;
+          width: 59px;
+        }
+      }
+      svg {
+        width: 19px;
+        height: 19px;
+      }
+      p {
+        font-size: 12px;
+        line-height: 15px;
+      }
+      .dl-case-item__change-button {
+        font-size: 12px;
+        line-height: 15px;
+        height: 23px;
+        svg {
+          width: 14px;
+        }
+      }
+    }
+
     &__info {
     }
     &__coast {

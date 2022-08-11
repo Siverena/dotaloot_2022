@@ -137,6 +137,20 @@
 }
 
 @media (max-width: 1440px) {
+  .dl-user-items {
+    &__wrapper {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+    &__open-case {
+      margin: 0;
+    }
+    &__show-more {
+      margin-bottom: 49px;
+    }
+  }
   .dl-user-no-items {
     &__wrap {
       flex-direction: column;

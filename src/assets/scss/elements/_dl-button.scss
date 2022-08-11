@@ -12,6 +12,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  text-decoration: none;
   margin: 0 auto;
   &:hover {
     background-image: linear-gradient(216.36deg, #ff8b00 21.2%, #e8cb63 88.03%);
@@ -23,8 +24,12 @@
     color: $white;
     background-color: $green;
     &:hover {
-      background-image: linear-gradient(216.36deg, #49b32c 21.2%, #bae37d 88.03% /*,
-        #ebff03 88.03%*/);
+      background-image: linear-gradient(
+        216.36deg,
+        #49b32c 21.2%,
+        #bae37d 88.03% /*,
+        #ebff03 88.03%*/
+      );
     }
     &:active {
       background-image: none;
@@ -34,7 +39,11 @@
     color: $white;
     background-color: $blue;
     &:hover {
-      background-image: linear-gradient(216.36deg, #0bc3ff 21.2%, #a9e9da 88.03%);
+      background-image: linear-gradient(
+        216.36deg,
+        #0bc3ff 21.2%,
+        #a9e9da 88.03%
+      );
     }
     &:active {
       background-image: none;
@@ -42,11 +51,15 @@
   }
   &--orange {
     color: $grey;
-
+    text-decoration: none;
+    border: none;
     background: $orange;
-
     &:hover {
-      background-image: linear-gradient(216.36deg, #ff8b00 21.2%, #e8cb63 88.03%);
+      background-image: linear-gradient(
+        216.36deg,
+        #ff8b00 21.2%,
+        #e8cb63 88.03%
+      );
     }
     &:active {
       background-image: none;

@@ -22,24 +22,24 @@ export default {
       this.status = 'checkingAvailability';
       setTimeout(() => {
         this.waitForSeller();
-      }, 50 * 1000);
+      }, 10 * 1000);
     },
     /**
      * Ожидание продавца
      * @param {Number} min - количество минут
      */
-    waitForSeller(min = 5) {
+    waitForSeller(min = 1) {
       this.status = 'waitingForSeller';
-      this.deadline = new Date(Date.now() + min * 5 * 1000);
+      this.deadline = new Date(Date.now() + min * 10 * 1000);
       this.startTimer(this.waitForChange);
     },
     /**
      * Ожидание обмена
      * @param {Number} min - количество минут
      */
-    waitForChange(min = 5) {
+    waitForChange(min = 1) {
       this.status = 'changeReady';
-      this.deadline = new Date(Date.now() + min * 60 * 1000);
+      this.deadline = new Date(Date.now() + min * 10 * 1000);
       this.startTimer();
     },
     /**

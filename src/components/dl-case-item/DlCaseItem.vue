@@ -145,7 +145,7 @@
             fill="#49B32C"
           />
         </svg>
-        <span>{{ dataTimer.minutes }} : {{ dataTimer.seconds }}</span>
+        <span>{{ dataTimer.minutes }}:{{ dataTimer.seconds }}</span>
       </div>
       <p>ожидаем продавца</p>
     </div>
@@ -177,7 +177,7 @@
             fill="#ffffff"
           />
         </svg>
-        <span>{{ dataTimer.minutes }} : {{ dataTimer.seconds }}</span>
+        <span>{{ dataTimer.minutes }}:{{ dataTimer.seconds }}</span>
       </div>
       <p>обмен готов</p>
       <div class="dl-button dl-case-item__change-button" @click="takeItem">

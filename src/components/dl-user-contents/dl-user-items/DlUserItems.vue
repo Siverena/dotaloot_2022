@@ -7,7 +7,7 @@
     />
     <DlCaseItem
       v-for="(item, index) in items"
-      :key="index"
+      :key="item.id"
       :item="item.item"
       :class="page === 'contract' ? 'dl-case-item--contract' : ''"
       @click="page === 'contract' ? handleClick(index, 'contract') : ''"

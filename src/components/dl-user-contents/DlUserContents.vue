@@ -13,15 +13,14 @@
     :items="displayedItems"
     :gift="gamer.gift"
     :page="page"
-    :key="isActive"
   />
   <DlUserContracts
     v-if="filterType === 'contract'"
     :contracts="displayedContracts"
   />
   <div class="dl-user-items__wrapper">
-    <div class="dl-user-items__open-case dl-button--orange">
-      открыть кейс
+    <router-link to="/" class="dl-user-items__open-case dl-button--orange">
+      открыть кейсы
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="30"
@@ -34,7 +33,7 @@
           fill="#000011"
         />
       </svg>
-    </div>
+    </router-link>
     <div
       v-if="
         filterType === 'box' && filteredDrops.length !== numberOfDisplayedItems
