@@ -1,13 +1,7 @@
 import axios from 'axios';
 const API = (body) => {
   const response = axios.post('https://dotaloot.co/api/user/get/' + body);
-  //   console.log('response: ', response);
-  //   console.log(
-  //     'response,then: ',
-  //     response.then((data) => data.json())
-  //   );
   return response;
-  //   return axios.post('https://dotaloot.co/api/user/get/', body);
 };
 export default {
   state: {
@@ -30,6 +24,7 @@ export default {
           const userTmp = response.data;
           if (userTmp) {
             commit('SET_GAMER', userTmp.user);
+            return userTmp.user;
           }
         })
         .catch((e) => console.log(e));

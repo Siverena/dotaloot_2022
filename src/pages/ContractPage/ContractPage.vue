@@ -91,7 +91,7 @@
               <button
                 :disabled="!canCreateContract"
                 class="dl-contract__create"
-                @click="toggleshowWin()"
+                @click="toggleShowWin()"
               >
                 создать новый контракт
               </button>
@@ -188,7 +188,7 @@
               </div>
               <div
                 class="dl-contract__win-button dl-contract__win-button--try"
-                @click="toggleshowWin()"
+                @click="toggleShowWin()"
               >
                 <svg
                   width="38"

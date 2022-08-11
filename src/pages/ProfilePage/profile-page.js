@@ -17,14 +17,22 @@ export default {
   data() {
     return {
       loading: true,
+      gamer: {},
     };
   },
   methods: {
     ...mapActions(['fethGamer']),
     async loadData() {
-      this.loading = true;
-      await this.fethGamer(this.$attrs.id);
-      this.loading = await false;
+      try {
+        this.loading = true;
+        this.gamer = await this.fethGamer(this.$attrs.id);
+        if (!this.getGamer) {
+          return this.$router.push('/404');
+        }
+        this.loading = false;
+      } catch (e) {
+        console.log(e);
+      }
     },
   },
   beforeRouteUpdate() {
@@ -33,7 +41,7 @@ export default {
   computed: {
     ...mapGetters(['getGamer']),
   },
-  async mounted() {
+  async created() {
     this.loadData();
   },
 };
