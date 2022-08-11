@@ -29,7 +29,6 @@ export default {
           money: true,
         },
       ],
-
       combinations: [
         {
           name: 'Sunstrike',
@@ -66,5 +65,10 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    hasNoItems() {
+      return this.page === 'personal' && !this.items?.length;
+    },
   },
 };

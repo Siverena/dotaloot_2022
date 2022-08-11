@@ -28,7 +28,6 @@
         fill: $light-gray;
       }
     }
-
     &--active {
       color: $white;
       border-bottom: 3px solid $orange;
@@ -37,13 +36,13 @@
           fill: $orange;
         }
         &--disabled {
-            cursor: default;
-            color: #363637;
-            svg {
-                path {
-                    fill: #363637;
-                }
+          cursor: default;
+          color: #363637;
+          svg {
+            path {
+              fill: #363637;
             }
+          }
         }
       }
     }
@@ -66,55 +65,36 @@
     text-align: right;
     text-transform: uppercase;
     margin: 0 -10px;
-    color: #616161;
+    color: $light-gray;
     &::before {
       content: '';
       width: 3px;
       height: 4px;
-      background-color: #616161;
+      background-color: $light-gray;
       margin-right: 9px;
     }
-    &__switch-item {
-        padding: 9px 43px 13px 58px;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 17px;
-        display: flex;
-        align-items: center;
-        text-align: right;
-        text-transform: uppercase;
-        margin: 0 -10px;
-        color: $light-gray;
-        &::before {
-            content: "";
-            width: 3px;
-            height: 4px;
-            background-color: $light-gray;
-            margin-right: 9px;
-        }
-        &:hover {
-            color: $orange;
-            &::before {
-                background-color: $orange;
-            }
-        }
-        &--active {
-            background: #323232;
-            border-radius: 9px;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 17px;
-            display: flex;
-            align-items: center;
-            text-transform: uppercase;
+    &:hover {
+      color: $orange;
+      &::before {
+        background-color: $orange;
+      }
+    }
+    &--active {
+      background: #323232;
+      border-radius: 9px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+      display: flex;
+      align-items: center;
+      text-transform: uppercase;
 
-            color: $white;
+      color: $white;
 
-            &::before {
-                background-color: $white;
-            }
-        }
+      &::before {
+        background-color: $white;
+      }
     }
   }
 }

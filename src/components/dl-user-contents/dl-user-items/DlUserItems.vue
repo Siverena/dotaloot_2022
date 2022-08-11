@@ -11,9 +11,10 @@
       :item="item.item"
       :class="page === 'contract' ? 'dl-case-item--contract' : ''"
       @click="page === 'contract' ? handleClick(index, 'contract') : ''"
+      :page="page"
     />
   </div>
-  <div class="dl-user-no-items">
+  <div v-if="hasNoItems" class="dl-user-no-items">
     <div class="dl-user-no-items__get">
       У вас нет предметов? <span>Давайте это исправим!</span>
     </div>
@@ -37,7 +38,6 @@
             :catId="1"
           />
         </div>
-
         <span class="dl-user-no-items__text">открыть</span>
       </div>
     </div>
