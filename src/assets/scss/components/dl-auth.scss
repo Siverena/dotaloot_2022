@@ -71,6 +71,7 @@
         color: #ffffff;
         padding: 7px 13px;
         display: flex;
+        border: none;
         img {
             margin-left: 4px;
             display: block;
@@ -174,6 +175,12 @@
 @media (max-width: 1440px) {
 }
 @media (max-width: 833px) {
+    .dl-auth {
+        margin: 0 5px;
+    }
+    .dl-auth-before {
+        padding: 2px 5px 2px 9px;
+    }
     .dl-auth-after {
         &__pay {
             padding: 7px 7px;

@@ -62,4 +62,13 @@
     }
 }
 @media (max-width: 833px) {
+    .dl-header {
+        padding: 22px 7px;
+        &__online {
+            display: none;
+        }
+        &__sound {
+            display: none;
+        }
+    }
 }
