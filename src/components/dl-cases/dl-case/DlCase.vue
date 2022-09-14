@@ -159,7 +159,9 @@
             </defs>
           </svg>
         </div>
-        <div class="dl-case__open-button">открыть кейс</div>
+        <router-link :to="`/open-case/${caseItem.id}`">
+          <div class="dl-case__open-button">открыть кейс</div>
+        </router-link>
       </div>
     </div>
   </div>

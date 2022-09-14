@@ -9,7 +9,7 @@
     >
       <div class="dl-case-item__info">
         <div class="dl-case-item__coast">{{ item.price }} ₽</div>
-        <div class="dl-case-item__status-wrap">
+        <div v-if="page !== 'open-case'" class="dl-case-item__status-wrap">
           <div class="dl-case-item__status">
             <svg
               width="10"
